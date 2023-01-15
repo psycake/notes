@@ -4,9 +4,63 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Notes</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter"/>
+	<style>
+		:root {
+			font-family: Inter;
+			text-align: center;
+		}
+
+		section {
+			height: 98vh;
+			max-height: 20em;
+			width: 98vw;
+			transform: translateY(8vh);
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		a {
+			color: #333;
+		}
+
+		.item {
+			margin: 1em 2em;
+		}
+
+		.image-container {
+			height: 128px;
+			width: 128px;
+			margin: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+	<title>Psycake's Notes</title>
 </head>
 <body>
-	<h1>Notes</h1>	
+	<section>
+		<h1 style="flex-basis: 100%;">Psycake's Notes</h1>
+		<div class="item">
+			<a href="/notkesto">
+				<div class="image-container">
+					<img src="/notkesto/favicon.ico" alt="Note box icon">
+				</div>
+				<h1>Notkesto</h1>
+			</a>
+			<p>Everything I know</p>
+		</div>
+		<div class="item">
+			<a href="/lingokesto">
+				<div class="image-container">
+					<img src="/lingokesto/favicon.ico" alt="Parrot icon">
+				</div>
+				<h1>Lingokesto</h1>
+			</a>
+			<p>My linguistics projects</p>
+		</div>
+	</section>
 </body>
 </html>
