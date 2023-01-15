@@ -1,0 +1,355 @@
+/* Custom variables */
+:root {
+	/* Header */
+	--custom-header-background: #333;
+	--custom-header-text: #eee;
+	/* Buttons */
+	--custom-button-background: #444;
+	--custom-button-border: #777;
+	--custom-button-text: #ddd;
+	/* Others */
+	--custom-divider-colour: #555;
+	--custom-sidepane-colour: #282828;
+	--custom-accent-colour: #337ba4;
+}
+
+/* Applies to everything */
+* {
+	scrollbar-width: auto !important;
+}
+
+/* Inter as main font */
+body {
+	font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+}
+
+/* ------------------------- */
+/* Header and related tweaks */
+/* ------------------------- */
+
+/* Add favicon beside homelink */
+.theme-obs-light #homelink,
+.theme-obs-dark #homelink {
+	background-image: url("/lingokesto/favicon.ico");
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-right: 2em !important;
+	padding-left: 1.5em;
+	height: 1em;
+	width: 5em !important;
+}
+
+/* Colour for the site name */
+.theme-obs-light *,
+.theme-obs-dark * {
+	--homelink-color: var(--custom-header-text) !important;
+}
+
+.theme-obs-light .header,
+.theme-obs-dark .header {
+	/* Bold text for header */
+	font-weight: bold;
+	/* Reduce padding on top */
+	padding-top: 1.5rem !important;
+}
+
+/* Background colour that shows up behind the actual note */
+/* Actual header background colour is defined below */
+.theme-obs-light * {
+	--header-bg: var(--bg-note) !important;
+}
+.theme-obs-dark * {
+	--header-bg: var(--bg-note) !important;
+}
+
+/* Header background colour */
+.theme-obs-light .header,
+.theme-obs-dark .header {
+	--header-bg: var(--custom-header-background) !important;
+}
+
+/* Header shortcuts (Home, etc.) colour */
+.theme-obs-light a.navbar-link {
+	color: var(--custom-button-text) !important;
+}
+
+/* Move the icon tray all the way to the right */
+.icon-tray {
+	position: absolute;
+	right: calc(1em - 3px);
+}
+
+/* Icon (theme, search, graph, etc.) tweaks */
+.theme-obs-light .icon-tray div,
+.theme-obs-dark .icon-tray div {
+	background-color: var(--custom-button-background) !important;
+	border: 2px solid var(--custom-button-border) !important;
+	border-radius: 5px;
+	margin: 0 3px;
+}
+
+/* Sidepane toggles on mobile */
+.left_pane_toggle_nav,
+.right_pane_toggle_nav {
+	border: 2px solid;
+	border-radius: 10px;
+	padding-top: 0.3rem !important;
+	padding-bottom: 0.4em !important;
+}
+.right_pane_toggle_nav {
+	/* Since we hide the right pane below, hide its toggle too */
+	display: none !important;
+}
+.theme-obs-light .left_pane_toggle_nav,
+.theme-obs-light .right_pane_toggle_nav,
+.theme-obs-dark .left_pane_toggle_nav,
+.theme-obs-dark .right_pane_toggle_nav {
+	background-color: var(--custom-button-background) !important;
+	border-color: var(--custom-button-border);
+	color: var(--custom-button-text);
+}
+
+/* Header bacground colour on mobile */
+@media (max-width: 602px) {
+	.theme-obs-light .header,
+	.theme-obs-dark .header {
+		background-color: var(--custom-header-background) !important;
+	}
+}
+
+/* Open header button on mobile */
+.theme-obs-light .navbar-button,
+.theme-obs-dark .navbar-button {
+	color: var(--custom-header-text) !important;
+	border-bottom: 3px solid var(--custom-button-colour) !important;
+	border-radius: 0 !important;
+	background-color: #3f3f3f !important;
+	margin: -0.5rem 0 -0.3rem 0 !important;
+	padding: 0.3rem 0 0.4rem 0 !important;
+	width: 100% !important;
+}
+.navbar.active {
+	margin-top: 0.3rem;
+}
+
+/* Theme selector popup */
+.theme-obs-light #theme-popup,
+.theme-obs-dark #theme-popup {
+	background-color: var(--custom-header-background) !important;
+	color: var(--custom-button-text) !important;
+	padding: 10px !important;
+	margin-bottom: 0 !important;
+}
+
+/* ---------------- */
+/* Side pane tweaks */
+/* ---------------- */
+
+/* Hide right pane; should be temporary until v3.4.0 */
+/* Most of the pane modifs apply to both headers nonetheless */
+.right_pane {
+	display: none !important;
+}
+
+.theme-obs-light .left_pane,
+.theme-obs-dark .left_pane,
+.theme-obs-light .right_pane,
+.theme-obs-dark .right_pane {
+	/* Background colour when collapsed */
+    background-color: var(--custom-sidepane-colour) !important;
+	/* Hide border when collapsed or open */
+	border: 0 solid !important;
+}
+
+/* Make the fold header square */
+.left_pane_fold_header,
+.right_pane_fold_header {
+	border-radius: 0 !important;
+}
+
+/* Fold header style */
+.theme-obs-light .left_pane_fold_header,
+.theme-obs-light .right_pane_fold_header,
+.theme-obs-dark .left_pane_fold_header,
+.theme-obs-dark .right_pane_fold_header {
+	color: var(--custom-button-text);
+	background-color: var(--custom-header-background) !important;
+	border-bottom: 2px solid var(--custom-button-colour);
+	font-weight: bold;
+}
+
+/* Side panes colours */
+.theme-obs-light .left_pane_content,
+.theme-obs-light .right_pane_content,
+.theme-obs-light .left_pane_content *,
+.theme-obs-light .right_pane_content *,
+.theme-obs-dark .left_pane_content,
+.theme-obs-dark .right_pane_content,
+.theme-obs-dark .left_pane_content *,
+.theme-obs-dark .right_pane_content * {
+    background-color: var(--custom-sidepane-colour) !important;
+	/* Main text colour */
+	color: #bbb !important;
+	/* Scrollbar colour */
+	--code-hightlight-color: 240, 240, 240 !important;
+}
+
+/* Colour for directory active file */
+.theme-obs-light .left_pane .dir-list a.active,
+.theme-obs-light .right_pane .dir-list a.active,
+.theme-obs-dark .left_pane .dir-list a.active,
+.theme-obs-dark .right_pane .dir-list a.active {
+	color: white !important;
+}
+
+/* Colour for directory hover */
+.theme-obs-light .left_pane .dir-list a:hover,
+.theme-obs-light .right_pane .dir-list a:hover,
+.theme-obs-dark .left_pane .dir-list a:hover,
+.theme-obs-dark .right_pane .dir-list a:hover {
+	color: white !important;
+}
+
+/* ---------------- */
+/* Container tweaks */
+/* ---------------- */
+
+.container {
+	/* Remove the top border */
+	border: 0 solid !important;
+	/* Give it an Obsidian-like look */
+	max-width: 40rem !important;
+	margin: 0 auto !important;
+	padding-top: 1.3em !important;
+}
+
+/* Link style */
+.container a {
+	color: var(--custom-accent-colour) !important;
+	font-weight: 525;
+}
+
+/* Remove the filler to the right of the container */
+.container_filler {
+	display: none;
+}
+
+/* Heading tweaks */
+.content h1 {
+	border-bottom: 2px solid grey;
+	padding-bottom: 0.01em !important;
+	font-size: 1.2em;
+}
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+	border-bottom: 2px solid grey;
+	padding-bottom: 0.01em !important;
+	font-size: 1em;
+}
+
+/* Inline code tweaks */
+.content code {
+	color: var(--normal-text-color) !important;
+	font-family: 'JetBrains Mono';
+}
+
+/* Hide the scrollbar by changing its colour */
+.theme-obs-light .container {
+	/* Matches #fff, --bg-note with .theme-obs-light */
+	--code-hightlight-color: 255, 255, 255 !important;
+}
+.theme-obs-dark .container {
+	/* Matches #202020, --bg-note with .theme-obs-dark */
+	--code-hightlight-color: 32, 32, 32 !important;
+}
+
+/* Embedded title */
+embeddedtitle {
+	text-transform: capitalize;
+}
+
+/* Graph buttons */
+.graph-button-row button {
+	background-color: var(--custom-button-background) !important;
+	border: 2px solid var(--custom-button-border);
+	border-radius: 10px;
+	color: var(--custom-button-text);
+}
+.graph_type_button {
+	text-transform: uppercase;
+}
+
+/* Backlinks and tags footer */
+.note-footer {
+	flex-wrap: wrap;
+}
+/* Backlinks need more space than tags */
+.backlinks {
+	flex: 45% !important;
+}
+/* Narrow screens get backlinks and tags on top of each other */
+@media (max-width: 602px) {
+	div.backlinks, div.tags {
+		flex: 100% !important;
+	}
+}
+/* Backlinks and tags headings style */
+.backlinks h2,
+.tags h2 {
+	border-bottom: 2px solid grey;
+	padding-bottom: 0.35em !important;
+}
+
+.backlinks ul {
+	text-transform: capitalize;
+}
+
+/* ---------- */
+/* Graph view */
+/* ---------- */
+
+/* Colour of the graph button bar */
+.graph_full_page {
+	background-color: var(--graph-bg);
+	padding-top: 1em !important;
+	padding-right: 0.8em !important;
+}
+
+/* Remove margins and extend graph view to the whole viewport */
+div.graph_div_full {
+	margin: 0;
+	height: 100vh;
+}
+
+/* ------ */
+/* Search */
+/* ------ */
+
+/* Colour of the note titles */
+.search-result-title a {
+	color: var(--custom-accent-colour) !important;
+	font-weight: bold;
+}
+
+/* Colour of the highlighting */
+@layer plugin {
+	.search-highlights em {
+		font-weight: 500;
+	}
+	/* These are brighter/darker shades of #337ba4, the accent colour */
+	.theme-light .search-highlights em,
+	.theme-obs-light .search-highlights em {
+		background-color: #d4e7f1 !important;
+	}
+	.theme-obs-dark .search-highlights em {
+		background-color: #1b4156 !important;
+	}
+}
+
+/* Tags screen */
+.subtags button {
+	text-transform: uppercase;
+}

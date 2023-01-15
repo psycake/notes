@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="class b subnetting">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="/notkesto/favicon.ico" />
+
+                <!-- Set title -->
+                <title>Notkesto</title>
+
+                <!-- Includes -->
+                <link rel="stylesheet" href="/notkesto/obs.html/notkesto.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains+Mono"/>
+<script src="/notkesto/obs.html/static/obsidian_core.js"></script>
+<script src="/notkesto/obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="/notkesto/obs.html/static/master.css" />
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="/notkesto/obs.html/static/flexsearch.bundle.js"></script>
+<script src="/notkesto/obs.html/static/pako.js"></script>
+<script src="/notkesto/obs.html/static/search.js"></script>
+<script src="/notkesto/obs.html/static/dirtree.js"></script>
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'class b subnetting';
+                        const HTML_URL_PREFIX = '/notkesto';
+                        const PAGE_DEPTH = 1;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction">
+                                <b>esc</b> to dismiss
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="/notkesto/index.html" id="homelink" title="Clear screen and go to homepage">Notkesto</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    <a class="navbar-link" href="/notkesto/index.html" title="🏠️ Home">🏠️ Home</a>
+<a class="navbar-link" href="/notkesto/Mathematics/Matemáticas Aplicadas y Computación.html" title="💻️ MAC">💻️ MAC</a>
+<a class="navbar-link" href="https://github.com/psycake/notes" title="👾 GitHub">👾 GitHub</a>
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+                <img src = "/notkesto/obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+                function openSearch(){
+                        // toggle search popup and continue with extra code if it is enabled this time
+                        if (toggle_id('search-master-div')){
+                                // clear input and put focus on it so that we can start typing immediately
+                                let ss = document.getElementById('search_string');
+                                ss.value = '';
+                                ss.focus()
+                                ss.select()
+                        }
+                }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="/notkesto/obs.html/graph/index.html?node=class b subnetting" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "/notkesto/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="/notkesto/obs.html/dir_index.html" title="View directory tree">
+                    <img src = "/notkesto/obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="/notkesto/obs.html/tags/index.html" title="Open tag view">
+            <img src = "/notkesto/obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="light">light</option>
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div class="dirtree"><button id="folder-1" class="dir-button" onclick="toggle_dir(this.id)">Computing</button>
+<div id="folder-container-1" class="dir-container requires_js active" path="/notkesto/Computing">
+	<ul class="dir-list">
+		<li><a class="" href="/notkesto/Computing/Binary Tree.html"  >Binary Tree</a></li>
+		<li><a class="" href="/notkesto/Computing/Class B IP Address.html"  >Class B IP Address</a></li>
+		<li><a class="" href="/notkesto/Computing/Class B Subnetting.html"  >Class B Subnetting</a></li>
+		<li><a class="" href="/notkesto/Computing/Doubly Linked List.html"  >Doubly Linked List</a></li>
+		<li><a class="" href="/notkesto/Computing/List.html"  >List</a></li>
+		<li><a class="" href="/notkesto/Computing/Queue.html"  >Queue</a></li>
+		<li><a class="" href="/notkesto/Computing/Search Binary Tree.html"  >Search Binary Tree</a></li>
+		<li><a class="" href="/notkesto/Computing/Simple Linked List.html"  >Simple Linked List</a></li>
+		<li><a class="" href="/notkesto/Computing/Stack.html"  >Stack</a></li>
+		<li><a class="" href="/notkesto/Computing/Subnetting.html"  >Subnetting</a></li>
+		<li><a class="" href="/notkesto/Computing/Tree.html"  >Tree</a></li>
+	</ul>
+</div>
+<button id="folder-2" class="dir-button" onclick="toggle_dir(this.id)">Linguistics</button>
+<div id="folder-container-2" class="dir-container requires_js " path="/notkesto/Linguistics">
+	<ul class="dir-list">
+		<li><a class="" href="/notkesto/Linguistics/Alternation.html"  >Alternation</a></li>
+		<li><a class="" href="/notkesto/Linguistics/Metathesis.html"  >Metathesis</a></li>
+	</ul>
+</div>
+<button id="folder-3" class="dir-button" onclick="toggle_dir(this.id)">Mathematics</button>
+<div id="folder-container-3" class="dir-container requires_js " path="/notkesto/Mathematics">
+	<ul class="dir-list">
+		<li><a class="" href="/notkesto/Mathematics/Absolute Error.html"  >Absolute Error</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Absolute Minimal and Maximal Elements.html"  >Absolute Minimal and Maximal Elements</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Absolutely Convergent Series.html"  >Absolutely Convergent Series</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Accumulation Point.html"  >Accumulation Point</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Algebra.html"  >Algebra</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Angle Between Lines.html"  >Angle Between Lines</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Angle Between Planes.html"  >Angle Between Planes</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Approximation Order of a Function.html"  >Approximation Order of a Function</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Associated Matrix of Composed Transformations.html"  >Associated Matrix of Composed Transformations</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Associated Matrix of Operated Transformations.html"  >Associated Matrix of Operated Transformations</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Associated Matrix of a Linear Transformation.html"  >Associated Matrix of a Linear Transformation</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Bijective Linear Transformations.html"  >Bijective Linear Transformations</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Bisection Method.html"  >Bisection Method</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Boolean Matrix.html"  >Boolean Matrix</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Boundary Point.html"  >Boundary Point</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Calculation of Eigenvalues and Eigenvectors.html"  >Calculation of Eigenvalues and Eigenvectors</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Calculus.html"  >Calculus</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Cartesian Product.html"  >Cartesian Product</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Cayley-Hamilton Theorem.html"  >Cayley-Hamilton Theorem</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Change of Basis Matrix.html"  >Change of Basis Matrix</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Characteristic Polynomial.html"  >Characteristic Polynomial</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Characteristic Polynomial of a Diagonalisable Transformation.html"  >Characteristic Polynomial of a Diagonalisable Transformation</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Closed Set.html"  >Closed Set</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Closure.html"  >Closure</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Compact Set.html"  >Compact Set</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Comparability.html"  >Comparability</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Composition of Relations.html"  >Composition of Relations</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Conjugate Transpose Matrix.html"  >Conjugate Transpose Matrix</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Continuous Function.html"  >Continuous Function</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Contour Line.html"  >Contour Line</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Convergence Order of a Numerical Method.html"  >Convergence Order of a Numerical Method</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Convergence Speed of a Sequence.html"  >Convergence Speed of a Sequence</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Convergence Tests for Series.html"  >Convergence Tests for Series</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Coordinate Vector.html"  >Coordinate Vector</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Cálculo III.html"  >Cálculo III</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Diagonal Associated Matrix.html"  >Diagonal Associated Matrix</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Diagonalisation Test.html"  >Diagonalisation Test</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Diagonalisation of a Linear Transformation.html"  >Diagonalisation of a Linear Transformation</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Digraph.html"  >Digraph</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Distance Between Two Lines.html"  >Distance Between Two Lines</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Distance Between a Line and a Point.html"  >Distance Between a Line and a Point</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Distance from a Plane to a Point.html"  >Distance from a Plane to a Point</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Domain and Range of a Relation.html"  >Domain and Range of a Relation</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Eigenspace.html"  >Eigenspace</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Eigenvalues and Eigenvectors.html"  >Eigenvalues and Eigenvectors</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Empty Set.html"  >Empty Set</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Equal Functions.html"  >Equal Functions</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Equivalence Class.html"  >Equivalence Class</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Equivalence Relation.html"  >Equivalence Relation</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Error Propagation.html"  >Error Propagation</a></li>
+		<li><a class="" href="/notkesto/Mathematics/False Position Method.html"  >False Position Method</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Floating Point Form of Real Numbers.html"  >Floating Point Form of Real Numbers</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Function.html"  >Function</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Geometry.html"  >Geometry</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Hasse Diagram.html"  >Hasse Diagram</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Identity Matrix.html"  >Identity Matrix</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Identity Transformation.html"  >Identity Transformation</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Image and Preimage of a Function.html"  >Image and Preimage of a Function</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Improper Integral.html"  >Improper Integral</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Increasing and Decreasing Sequence.html"  >Increasing and Decreasing Sequence</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Infinite Collection of Sets.html"  >Infinite Collection of Sets</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Injective Linear Transformation.html"  >Injective Linear Transformation</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Inner Product.html"  >Inner Product</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Interior Point.html"  >Interior Point</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Inverse Linear Transformation.html"  >Inverse Linear Transformation</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Inverse Relation.html"  >Inverse Relation</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Isomorphism.html"  >Isomorphism</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Jacobian Matrix.html"  >Jacobian Matrix</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Lattice.html"  >Lattice</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Law of Cosines.html"  >Law of Cosines</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Level Set.html"  >Level Set</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Limit Point.html"  >Limit Point</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Limit of a Sequence.html"  >Limit of a Sequence</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Line.html"  >Line</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Line Intersection.html"  >Line Intersection</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Linear Operator Determinant.html"  >Linear Operator Determinant</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Linear Transformation.html"  >Linear Transformation</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Linear Transformation Addition.html"  >Linear Transformation Addition</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Linear Transformation Composition.html"  >Linear Transformation Composition</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Linear Transformation Scalar Multiplication.html"  >Linear Transformation Scalar Multiplication</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Matemáticas Aplicadas y Computación.html"  >Matemáticas Aplicadas y Computación</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Matemáticas Discretas.html"  >Matemáticas Discretas</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Matrix of a Relation.html"  >Matrix of a Relation</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Metric Space.html"  >Metric Space</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Minimal and Maximal.html"  >Minimal and Maximal</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Minimum and Maximum.html"  >Minimum and Maximum</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Métodos Numéricos I.html"  >Métodos Numéricos I</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Norm.html"  >Norm</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Norm under Real Numbers.html"  >Norm under Real Numbers</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Normalised Form of Real Numbers.html"  >Normalised Form of Real Numbers</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Open Ball.html"  >Open Ball</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Open Cover.html"  >Open Cover</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Open Set.html"  >Open Set</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Operations of Limits of Sequences.html"  >Operations of Limits of Sequences</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Order Relation.html"  >Order Relation</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Orthogonal Complement.html"  >Orthogonal Complement</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Orthogonal Matrix.html"  >Orthogonal Matrix</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Orthogonal Projection of a Vector.html"  >Orthogonal Projection of a Vector</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Orthogonal Transformation.html"  >Orthogonal Transformation</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Orthonormal and Orthogonal Set.html"  >Orthonormal and Orthogonal Set</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Parallel Lines.html"  >Parallel Lines</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Partial Fraction Decomposition.html"  >Partial Fraction Decomposition</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Partially Ordered Set.html"  >Partially Ordered Set</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Partition of a Set.html"  >Partition of a Set</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Plane.html"  >Plane</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Plane Intersection.html"  >Plane Intersection</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Planes and Points.html"  >Planes and Points</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Powers of a Relation.html"  >Powers of a Relation</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Product of an Associated Matrix and a Coordinate Vector.html"  >Product of an Associated Matrix and a Coordinate Vector</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Properties of Relations.html"  >Properties of Relations</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Properties of Relations in their Representations.html"  >Properties of Relations in their Representations</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Quotient Set.html"  >Quotient Set</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Range of a Function.html"  >Range of a Function</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Real Numbers as a Vector Space.html"  >Real Numbers as a Vector Space</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Relating Associated Matrices and Changes of Basis.html"  >Relating Associated Matrices and Changes of Basis</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Relation.html"  >Relation</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Relations as a Set.html"  >Relations as a Set</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Relative Error.html"  >Relative Error</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Rounding Error.html"  >Rounding Error</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Secant Method.html"  >Secant Method</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Sequence.html"  >Sequence</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Series.html"  >Series</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Stability of a Numerical Method.html"  >Stability of a Numerical Method</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Subsequence.html"  >Subsequence</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Supremum and Infimum.html"  >Supremum and Infimum</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Surjective Linear Transformations.html"  >Surjective Linear Transformations</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Taylor Polynomial.html"  >Taylor Polynomial</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Taylor Series.html"  >Taylor Series</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Taylor Theorem.html"  >Taylor Theorem</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Total Order Relation.html"  >Total Order Relation</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Two Line Cases.html"  >Two Line Cases</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Upper and Lower Bounds.html"  >Upper and Lower Bounds</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Vector Space.html"  >Vector Space</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Vectorial Function.html"  >Vectorial Function</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Well-Order.html"  >Well-Order</a></li>
+	</ul>
+</div>
+<button id="folder-4" class="dir-button" onclick="toggle_dir(this.id)">Note-taking</button>
+<div id="folder-container-4" class="dir-container requires_js " path="/notkesto/Note-taking">
+	<ul class="dir-list">
+		<li><a class="" href="/notkesto/Note-taking/Atomicity.html"  >Atomicity</a></li>
+		<li><a class="" href="/notkesto/Note-taking/Brains are Better at Thinking than at Storing Information.html"  >Brains are Better at Thinking than at Storing Information</a></li>
+		<li><a class="" href="/notkesto/Note-taking/Zettelkasten.html"  >Zettelkasten</a></li>
+	</ul>
+</div>
+<button id="folder-5" class="dir-button" onclick="toggle_dir(this.id)">Notkesto</button>
+<div id="folder-container-5" class="dir-container requires_js " path="/notkesto/Notkesto">
+	<ul class="dir-list">
+		<li><a class="" href="/notkesto/Notkesto/Arbaro.html"  >Arbaro</a></li>
+		<li><a class="" href="/notkesto/Notkesto/Arbonoto.html"  >Arbonoto</a></li>
+		<li><a class="" href="/notkesto/Notkesto/Biciklujo.html"  >Biciklujo</a></li>
+		<li><a class="" href="/notkesto/Notkesto/Course Tag List.html"  >Course Tag List</a></li>
+		<li><a class="" href="/notkesto/Notkesto/Gvidonoto.html"  >Gvidonoto</a></li>
+		<li><a class="" href="/notkesto/Notkesto/Klasnoto.html"  >Klasnoto</a></li>
+		<li><a class="" href="/notkesto/Notkesto/Kompasnoto.html"  >Kompasnoto</a></li>
+		<li><a class="" href="/notkesto/Notkesto/Kursmapo.html"  >Kursmapo</a></li>
+		<li><a class="" href="/notkesto/Notkesto/Notkesto.html"  >Notkesto</a></li>
+		<li><a class="" href="/notkesto/Notkesto/Pinglonoto.html"  >Pinglonoto</a></li>
+		<li><a class="" href="/notkesto/Notkesto/Roknoto.html"  >Roknoto</a></li>
+		<li><a class="" href="/notkesto/Notkesto/Rokujo.html"  >Rokujo</a></li>
+		<li><a class="" href="/notkesto/Notkesto/Tag List.html"  >Tag List</a></li>
+		<li><a class="" href="/notkesto/Notkesto/Taglibro.html"  >Taglibro</a></li>
+		<li><a class="" href="/notkesto/Notkesto/Tagnoto.html"  >Tagnoto</a></li>
+		<li><a class="" href="/notkesto/Notkesto/Temomapo.html"  >Temomapo</a></li>
+		<li><a class="" href="/notkesto/Notkesto/obsidian-html.html"  >obsidian-html</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><a class="" href="/notkesto/index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <embeddedtitle>Class b subnetting</embeddedtitle>
+<div class="content"><p><strong>Topics:</strong> <a href="/notkesto/not_created.html" class="nonexistent-link">Computer Network</a> - <a href="/notkesto/not_created.html" class="nonexistent-link">IP Address</a>   </p>
+<hr />
+<p><code>180.55.0.0</code> will be used for exemplification.   </p>
+<h1 id="borrowing-less-than-one-octet">Borrowing less than one octet</h1>
+<p>When we borrow less than one <a href="/notkesto/not_created.html" class="nonexistent-link">octet</a>, the process is mostly the same to <a href="/notkesto/not_created.html" class="nonexistent-link">Class C Subnetting</a>.   </p>
+<p>Let's say we borrow 4 bits from the host portion, such that we build <code>180.55.0.0/20</code>:   </p>
+<p><img alt="" src="/notkesto/Assets/LessOctetSubnetB.png" />   </p>
+<p>That gives us <span class="arithmatex">\(n = 4\)</span> and <span class="arithmatex">\(m = 12\)</span>, so:   </p>
+<ul>
+<li><span class="arithmatex">\(2^4 - 2 = 14\)</span> <a href="/notkesto/not_created.html" class="nonexistent-link">subnetworks</a>   </li>
+<li><span class="arithmatex">\(2^{12} - 2 = 4094\)</span> <a href="/notkesto/not_created.html" class="nonexistent-link">hosts</a>   </li>
+</ul>
+<p>The change factor is <span class="arithmatex">\(2^4 = 16\)</span>. With that, we can build the network table:   </p>
+<table>
+<thead>
+<tr>
+<th>Subnetwork</th>
+<th>Subnetwork IP</th>
+<th>First Host</th>
+<th>Last Host</th>
+<th>Broadcast</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>180.55.0.0</td>
+<td>180.55.0.1</td>
+<td>180.55.15.254</td>
+<td>180.55.15.255</td>
+</tr>
+<tr>
+<td>1</td>
+<td>180.55.16.0</td>
+<td>180.55.16.1</td>
+<td>180.55.31.254</td>
+<td>180.55.31.255</td>
+</tr>
+<tr>
+<td>2</td>
+<td>180.55.32.0</td>
+<td>180.55.32.1</td>
+<td>180.55.47.254</td>
+<td>180.55.47.255</td>
+</tr>
+<tr>
+<td>3</td>
+<td>180.55.48.0</td>
+<td>180.55.48.1</td>
+<td>180.55.63.254</td>
+<td>180.55.63.255</td>
+</tr>
+<tr>
+<td>4</td>
+<td>180.55.64.0</td>
+<td>180.55.64.1</td>
+<td>180.55.79.254</td>
+<td>180.55.79.255</td>
+</tr>
+<tr>
+<td>5</td>
+<td>180.55.80.0</td>
+<td>180.55.80.1</td>
+<td>180.55.95.254</td>
+<td>180.55.95.255</td>
+</tr>
+<tr>
+<td>6</td>
+<td>180.55.96.0</td>
+<td>180.55.96.1</td>
+<td>180.55.111.254</td>
+<td>180.55.111.255</td>
+</tr>
+<tr>
+<td>7</td>
+<td>180.55.112.0</td>
+<td>180.55.112.1</td>
+<td>180.55.127.254</td>
+<td>180.55.127.255</td>
+</tr>
+<tr>
+<td>8</td>
+<td>180.55.128.0</td>
+<td>180.55.128.1</td>
+<td>180.55.143.254</td>
+<td>180.55.143.255</td>
+</tr>
+<tr>
+<td>9</td>
+<td>180.55.144.0</td>
+<td>180.55.144.1</td>
+<td>180.55.159.254</td>
+<td>180.55.159.255</td>
+</tr>
+<tr>
+<td>10</td>
+<td>180.55.160.0</td>
+<td>180.55.160.1</td>
+<td>180.55.175.254</td>
+<td>180.55.175.255</td>
+</tr>
+<tr>
+<td>11</td>
+<td>180.55.176.0</td>
+<td>180.55.176.1</td>
+<td>180.55.191.254</td>
+<td>180.55.191.255</td>
+</tr>
+<tr>
+<td>12</td>
+<td>180.55.192.0</td>
+<td>180.55.192.1</td>
+<td>180.55.207.254</td>
+<td>180.55.207.255</td>
+</tr>
+<tr>
+<td>13</td>
+<td>180.55.208.0</td>
+<td>180.55.208.1</td>
+<td>180.55.223.254</td>
+<td>180.55.223.255</td>
+</tr>
+<tr>
+<td>14</td>
+<td>180.55.224.0</td>
+<td>180.55.224.1</td>
+<td>180.55.239.254</td>
+<td>180.55.239.255</td>
+</tr>
+<tr>
+<td>15</td>
+<td>180.55.240.0</td>
+<td>180.55.240.1</td>
+<td>180.55.255.254</td>
+<td>180.55.255.255</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-hint active callout-folded" rasa="1">
+<div class="callout-title" onclick="toggle(this.parentElement)">
+<div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><line x1="18" y1="2" x2="22" y2="6"></line><path d="M7.5 20.5L19 9l-4-4L3.5 16.5 2 22z"></path></svg>
+</div>
+<div class="callout-title-name">We change more than one octet <br />
+</div>
+<div class="callout-title-fold"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ChevronDown"><polyline points="6 9 12 15 18 9"></polyline>
+</div>
+</div>
+<div class="callout-content">
+<p>Notice how, unlike class C subnetting, with class B subnetting we change the values of the two least significant octets, instead of just one. This is why we can have so many hosts per subnetwork. <br />
+</p>
+</div>
+</div>
+<div class="callout callout-tip active callout-folded" rasa="1">
+<div class="callout-title" onclick="toggle(this.parentElement)">
+<div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"></path></svg>
+</div>
+<div class="callout-title-name">An address and a gateway for each subnetwork <br />
+</div>
+<div class="callout-title-fold"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ChevronDown"><polyline points="6 9 12 15 18 9"></polyline>
+</div>
+</div>
+<div class="callout-content">
+<p>Remember: we use the subnetwork IP to identify a whole subnetwork (the whole group of devices under it). It's good practice to use the first host address for the gateway. <br />
+</p>
+</div>
+</div>
+<p>Finally, the <a href="/notkesto/not_created.html" class="nonexistent-link">subnet mask</a> for this subnet is <code>255.255.240.0</code>.   </p>
+<h1 id="borrowing-one-octet">Borrowing one octet</h1>
+<p>The process for borrowing one octet is easy and straightforward.   </p>
+<p>Since we borrow one octet, we will build <code>180.55.0.0/24</code>:   </p>
+<p><img alt="" src="/notkesto/Assets/OneOctetSubnetB.png" />   </p>
+<p>That gives us <span class="arithmatex">\(n = 8\)</span> and <span class="arithmatex">\(m = 8\)</span>, so:   </p>
+<ul>
+<li><span class="arithmatex">\(2^8 - 2 = 254\)</span> subnetworks   </li>
+<li><span class="arithmatex">\(2^8 - 2 = 254\)</span> hosts   </li>
+</ul>
+<p>That gives us a change factor of <span class="arithmatex">\(1\)</span>. We have too many subnetworks to feasibly build a complete table, but we can determine the addresses for a given <span class="arithmatex">\(n\)</span>subnetwork easily enough:   </p>
+<table>
+<thead>
+<tr>
+<th>Subnetwork</th>
+<th>Subnetwork IP</th>
+<th>First Host</th>
+<th>Last Host</th>
+<th>Broadcast</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>180.55.<mark class="formatting_highlight">10</mark>.0</td>
+<td>180.55.10.1</td>
+<td>180.55.10.254</td>
+<td>180.55.10.255</td>
+</tr>
+<tr>
+<td>82</td>
+<td>180.55.<mark class="formatting_highlight">82</mark>.0</td>
+<td>180.55.82.1</td>
+<td>180.55.82.254</td>
+<td>180.55.82.255</td>
+</tr>
+<tr>
+<td>101</td>
+<td>180.55.<mark class="formatting_highlight">101</mark>.0</td>
+<td>180.55.101.1</td>
+<td>180.55.101.254</td>
+<td>180.55.01</td>
+</tr>
+<tr>
+<td>128</td>
+<td>180.55.<mark class="formatting_highlight">128</mark>.0</td>
+<td>180.55.128.1</td>
+<td>180.55.128.254</td>
+<td>180.55.128.255</td>
+</tr>
+<tr>
+<td>200</td>
+<td>180.55.<mark class="formatting_highlight">200</mark>.0</td>
+<td>180.55.200.1</td>
+<td>180.55.200.254</td>
+<td>180.55.200.255</td>
+</tr>
+</tbody>
+</table>
+<p>The corresponding subnet mask is <code>255.255.255.0</code>.   </p>
+<h1 id="borrowing-more-than-one-octet">Borrowing more than one octet</h1>
+<p>When we borrow more than one octet, the process is a bit more complicated.   </p>
+<p>Let's say we borrow 11 bits, such that we build <code>180.55.0.0/27</code>:   </p>
+<p><img alt="" src="/notkesto/Assets/MoreOctetSubnetB.png" />   </p>
+<p>That gives us <span class="arithmatex">\(n = 11\)</span> and <span class="arithmatex">\(m = 5\)</span>, so:   </p>
+<ul>
+<li><span class="arithmatex">\(2^{11} - 2 = 2046\)</span> subnetworks   </li>
+<li><span class="arithmatex">\(2^5 - 2 = 30\)</span> hosts   </li>
+</ul>
+<p>We have no change factor this time around. Instead, we will follow an algorithm to determine the address.   </p>
+<p>Notice how, below the table (in red), we have the values corresponding to each bit relative to the octet they're in, while above the table (in orange) we have the values corresponding to each bit relative to the total amount of bits we're borrowing.   </p>
+<p>To get the address for a given <span class="arithmatex">\(n\)</span> subnetwork, we take the values from below such that they sum <span class="arithmatex">\(n\)</span>. Then, for each octet, we take the corresponding bit values and add them. The result will be the value that will go to the IP address for that specific octet.   </p>
+<p>For example, for the 10th subnetwork, we take the values <span class="arithmatex">\(2^3 + 2^1 = 8 + 2 = 10\)</span>. The corresponding bit values relative to the octets are <span class="arithmatex">\(1\)</span> (for the second octet) and <span class="arithmatex">\(64\)</span> (for the first octet). Thus, we get the address <code>180.55.1.64</code>.   </p>
+<p>We have way too many subnetworks to feasibly build a complete table, but we can determine the addresses for a few subnetworks:   </p>
+<table>
+<thead>
+<tr>
+<th>Subnet</th>
+<th>Subnet IP</th>
+<th>First Host</th>
+<th>Last Host</th>
+<th>Broadcast</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>180.55.1.64</td>
+<td>180.55.1.65</td>
+<td>180.55.1.94</td>
+<td>180.55.1.95</td>
+</tr>
+<tr>
+<td>11</td>
+<td>180.55.1.96</td>
+<td>180.55.1.97</td>
+<td>180.55.1.116</td>
+<td>180.55.117</td>
+</tr>
+<tr>
+<td>20</td>
+<td>180.55.2.128</td>
+<td>180.55.2.129</td>
+<td>180.55.2.158</td>
+<td>180.55.2.159</td>
+</tr>
+<tr>
+<td>21</td>
+<td>180.55.2.160</td>
+<td>180.55.2.161</td>
+<td>180.55.2.180</td>
+<td>180.55.2.181</td>
+</tr>
+<tr>
+<td>128</td>
+<td>180.55.16.0</td>
+<td>180.55.16.1</td>
+<td>180.55.16.30</td>
+<td>180.55.16.31</td>
+</tr>
+<tr>
+<td>260</td>
+<td>180.55.32.128</td>
+<td>180.55.32.129</td>
+<td>180.59.32.158</td>
+<td>180.59.32.159</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>180.55.125.0</td>
+<td>180.55.125.1</td>
+<td>180.55.125.30</td>
+<td>180.55.125.31</td>
+</tr>
+<tr>
+<td>2046</td>
+<td>180.55.255.224</td>
+<td>180.55.255.225</td>
+<td>180.55.255.254</td>
+<td>180.55.255.255</td>
+</tr>
+</tbody>
+</table>
+<p>The corresponding subnet mask is <code>255.255.255.224</code>.</p></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="/notkesto/Computing/Subnetting.html">subnetting</a></li>
+</ul>
+</div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="/notkesto/obs.html/tags/🌳/index.html">🌳</a></li>
+	<li><a class="backlink" href="/notkesto/obs.html/tags/MAC/S2/RC/index.html">MAC/S2/RC</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A95371325971726336775759150911245655563{level}" class="graph_div"></div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B95371325971726336775759150911245655563{level}" level="{level}" note_temp_id="95371325971726336775759150911245655563" onclick="window.ObsHtmlGraph.run(this, '95371325971726336775759150911245655563', 'class b subnetting');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C95371325971726336775759150911245655563{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('/notkesto/obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="/notkesto/obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>

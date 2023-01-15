@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="letras y jamos">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="/lingokesto/favicon.ico" />
+
+                <!-- Set title -->
+                <title>Lingkesto</title>
+
+                <!-- Includes -->
+                <link rel="stylesheet" href="/lingokesto/obs.html/lingokesto.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains+Mono"/>
+<script src="/lingokesto/obs.html/static/obsidian_core.js"></script>
+<script src="/lingokesto/obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="/lingokesto/obs.html/static/master.css" />
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="/lingokesto/obs.html/static/flexsearch.bundle.js"></script>
+<script src="/lingokesto/obs.html/static/pako.js"></script>
+<script src="/lingokesto/obs.html/static/search.js"></script>
+<script src="/lingokesto/obs.html/static/dirtree.js"></script>
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'letras y jamos';
+                        const HTML_URL_PREFIX = '/lingokesto';
+                        const PAGE_DEPTH = 2;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction">
+                                <b>esc</b> to dismiss
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="/lingokesto/index.html" id="homelink" title="Clear screen and go to homepage">Lingkesto</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    <a class="navbar-link" href="/lingokesto/index.html" title="🏠️ Home">🏠️ Home</a>
+<a class="navbar-link" href="/lingokesto/🇰🇷 🇪🇸 Jangul/🇰🇷 🇪🇸 Jangul.html" title="🇰🇷 🇪🇸 Jangul">🇰🇷 🇪🇸 Jangul</a>
+<a class="navbar-link" href="https://github.com/psycake/notes" title="👾 GitHub">👾 GitHub</a>
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+                <img src = "/lingokesto/obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+                function openSearch(){
+                        // toggle search popup and continue with extra code if it is enabled this time
+                        if (toggle_id('search-master-div')){
+                                // clear input and put focus on it so that we can start typing immediately
+                                let ss = document.getElementById('search_string');
+                                ss.value = '';
+                                ss.focus()
+                                ss.select()
+                        }
+                }
+        </script>
+                                    <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="/lingokesto/obs.html/graph/index.html?node=letras y jamos" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "/lingokesto/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="/lingokesto/obs.html/dir_index.html" title="View directory tree">
+                    <img src = "/lingokesto/obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="/lingokesto/obs.html/tags/index.html" title="Open tag view">
+            <img src = "/lingokesto/obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="light">light</option>
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div class="dirtree"><button id="folder-1" class="dir-button folder_note " href="/lingokesto/🇰🇷 🇪🇸 Jangul/🇰🇷 🇪🇸 Jangul.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>🇰🇷 🇪🇸 Jangul</button>
+<div id="folder-container-1" class="dir-container requires_js active" path="/lingokesto/🇰🇷 🇪🇸 Jangul">
+	<button id="folder-2" class="dir-button" onclick="toggle_dir(this.id)">Adjuntos</button>
+	<div id="folder-container-2" class="dir-container requires_js " path="/lingokesto/🇰🇷 🇪🇸 Jangul/Adjuntos">
+		<ul class="dir-list">
+			<li><a class="" href="/lingokesto/🇰🇷 🇪🇸 Jangul/Adjuntos/Pronounciation_ㄱ.png"  class="external-link">Pronounciation_ㄱ</a></li>
+			<li><a class="" href="/lingokesto/🇰🇷 🇪🇸 Jangul/Adjuntos/Pronounciation_ㄴ.png"  class="external-link">Pronounciation_ㄴ</a></li>
+			<li><a class="" href="/lingokesto/🇰🇷 🇪🇸 Jangul/Adjuntos/Pronounciation_ㅁ.jpg"  class="external-link">Pronounciation_ㅁ</a></li>
+			<li><a class="" href="/lingokesto/🇰🇷 🇪🇸 Jangul/Adjuntos/Pronounciation_ㅅ.png"  class="external-link">Pronounciation_ㅅ</a></li>
+			<li><a class="" href="/lingokesto/🇰🇷 🇪🇸 Jangul/Adjuntos/Vocales.png"  class="external-link">Vocales</a></li>
+		</ul>
+	</div>
+	<button id="folder-3" class="dir-button" onclick="toggle_dir(this.id)">Aprender</button>
+	<div id="folder-container-3" class="dir-container requires_js active" path="/lingokesto/🇰🇷 🇪🇸 Jangul/Aprender">
+		<ul class="dir-list">
+			<li><a class="" href="/lingokesto/🇰🇷 🇪🇸 Jangul/Aprender/1 - Qué es el Hangul.html"  >1 - Qué es el Hangul</a></li>
+			<li><a class="" href="/lingokesto/🇰🇷 🇪🇸 Jangul/Aprender/2 - Sílabas en Hangul.html"  >2 - Sílabas en Hangul</a></li>
+			<li><a class="" href="/lingokesto/🇰🇷 🇪🇸 Jangul/Aprender/3 - Conceptos y Convenciones.html"  >3 - Conceptos y Convenciones</a></li>
+			<li><a class="" href="/lingokesto/🇰🇷 🇪🇸 Jangul/Aprender/4 - Vocales Básicas.html"  >4 - Vocales Básicas</a></li>
+			<li><a class="" href="/lingokesto/🇰🇷 🇪🇸 Jangul/Aprender/5 - Consonantes Básicas.html"  >5 - Consonantes Básicas</a></li>
+			<li><a class="" href="/lingokesto/🇰🇷 🇪🇸 Jangul/Aprender/6 - Primeras Sílabas.html"  >6 - Primeras Sílabas</a></li>
+			<li><a class="" href="/lingokesto/🇰🇷 🇪🇸 Jangul/Aprender/Acentuación.html"  >Acentuación</a></li>
+			<li><a class="" href="/lingokesto/🇰🇷 🇪🇸 Jangul/Aprender/Letras y Jamos.html"  >Letras y Jamos</a></li>
+			<li><a class="" href="/lingokesto/🇰🇷 🇪🇸 Jangul/Aprender/Notación.html"  >Notación</a></li>
+		</ul>
+	</div>
+	<button id="folder-4" class="dir-button" onclick="toggle_dir(this.id)">Proceso</button>
+	<div id="folder-container-4" class="dir-container requires_js " path="/lingokesto/🇰🇷 🇪🇸 Jangul/Proceso">
+		<ul class="dir-list">
+			<li><a class="" href="/lingokesto/🇰🇷 🇪🇸 Jangul/Proceso/Adaptación de Consonantes.html"  >Adaptación de Consonantes</a></li>
+			<li><a class="" href="/lingokesto/🇰🇷 🇪🇸 Jangul/Proceso/Adaptación de Vocales.html"  >Adaptación de Vocales</a></li>
+			<li><a class="" href="/lingokesto/🇰🇷 🇪🇸 Jangul/Proceso/Combinaciones Imposibles.html"  >Combinaciones Imposibles</a></li>
+		</ul>
+	</div>
+	<button id="folder-5" class="dir-button" onclick="toggle_dir(this.id)">Sistemas de Unión</button>
+	<div id="folder-container-5" class="dir-container requires_js " path="/lingokesto/🇰🇷 🇪🇸 Jangul/Sistemas de Unión">
+		<ul class="dir-list">
+			<li><a class="" href="/lingokesto/🇰🇷 🇪🇸 Jangul/Sistemas de Unión/a - Unión de Inicio.html"  >a - Unión de Inicio</a></li>
+			<li><a class="" href="/lingokesto/🇰🇷 🇪🇸 Jangul/Sistemas de Unión/b - Unión de Núcleo.html"  >b - Unión de Núcleo</a></li>
+			<li><a class="" href="/lingokesto/🇰🇷 🇪🇸 Jangul/Sistemas de Unión/c - Unión de Coda.html"  >c - Unión de Coda</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><a class="" href="/lingokesto/🇰🇷 🇪🇸 Jangul/Textos de Ejemplo.html"  >Textos de Ejemplo</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><a class="" href="/lingokesto/index.html"  >index</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                <embeddedtitle>Letras y jamos</embeddedtitle>
+<div class="content"><p><strong>|← Regresar a <a href="/lingokesto/%F0%9F%87%B0%F0%9F%87%B7%20%F0%9F%87%AA%F0%9F%87%B8%20Jangul/%F0%9F%87%B0%F0%9F%87%B7%20%F0%9F%87%AA%F0%9F%87%B8%20Jangul.html">🇰🇷 🇪🇸 Jangul</a></strong> <br />
+<strong>← Regresar a <a href="/lingokesto/not_created.html" class="nonexistent-link">???</a></strong>   </p>
+<p>Afortunadamente el español tiene un alfabeto muy <em>fonémico</em>, lo que quiere decir que, de forma general, a cada letra le corresponde uno y solo un fonema. Por ello, es fácil ordenar en una tabla todos los jamo junto a todas las letras:   </p>
+<table>
+<thead>
+<tr>
+<th>Letra</th>
+<th>Jamo</th>
+<th>Fonema</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>ㅏ</td>
+<td>/a/</td>
+<td></td>
+</tr>
+<tr>
+<td>B</td>
+<td>ㅂ</td>
+<td>/b/</td>
+<td>Igual que V</td>
+</tr>
+<tr>
+<td>C</td>
+<td>ㄲ, ㅆ</td>
+<td>/k/, /θ/<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>/θ/ antes de ⟨e⟩ o ⟨i⟩; /k/ de otra forma</td>
+</tr>
+<tr>
+<td>CH</td>
+<td>ㅊ</td>
+<td>/tʃ/</td>
+<td>No es letra, pero representa un mismo fonema</td>
+</tr>
+<tr>
+<td>D</td>
+<td>ㄷ</td>
+<td>/d/</td>
+<td></td>
+</tr>
+<tr>
+<td>E</td>
+<td>ㅓ</td>
+<td>/e/</td>
+<td></td>
+</tr>
+<tr>
+<td>F</td>
+<td>ㅍ</td>
+<td>/f/</td>
+<td></td>
+</tr>
+<tr>
+<td>G</td>
+<td>ㄱ, ㅎ</td>
+<td>/g/, /x/</td>
+<td>/x/ antes de ⟨e⟩ o ⟨i⟩; /g/ de otra forma</td>
+</tr>
+<tr>
+<td>H</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>Muda, se ignora por completo en Jangul</td>
+</tr>
+<tr>
+<td>I</td>
+<td>ㅣ</td>
+<td>/i/</td>
+<td></td>
+</tr>
+<tr>
+<td>J</td>
+<td>ㅎ</td>
+<td>/x/</td>
+<td></td>
+</tr>
+<tr>
+<td>K</td>
+<td>ㄲ</td>
+<td>/k/</td>
+<td>Igual que Q</td>
+</tr>
+<tr>
+<td>L</td>
+<td>ㄹ</td>
+<td>/l/</td>
+<td></td>
+</tr>
+<tr>
+<td>LL</td>
+<td>ㅋ</td>
+<td>/ʝ/</td>
+<td>No es letra, pero representa un mismo fonema</td>
+</tr>
+<tr>
+<td>M</td>
+<td>ㅁ</td>
+<td>/m/</td>
+<td></td>
+</tr>
+<tr>
+<td>N</td>
+<td>ㄴ</td>
+<td>/n/</td>
+<td></td>
+</tr>
+<tr>
+<td>Ñ</td>
+<td>ㅌ</td>
+<td>/ɲ/</td>
+<td></td>
+</tr>
+<tr>
+<td>O</td>
+<td>ㅗ</td>
+<td>/o/</td>
+<td></td>
+</tr>
+<tr>
+<td>P</td>
+<td>ㅃ</td>
+<td>/p/</td>
+<td></td>
+</tr>
+<tr>
+<td>Q</td>
+<td>ㄱ</td>
+<td>/k/</td>
+<td>Igual que K</td>
+</tr>
+<tr>
+<td>R</td>
+<td>ㅈ, ㅉ</td>
+<td>/r/,  /ɾ/</td>
+<td>/r/ si al inicio de una palabra; /ɾ/ de otra forma</td>
+</tr>
+<tr>
+<td>RR</td>
+<td>ㅉ</td>
+<td>/r/</td>
+<td>No es letra, pero representa un mismo fonema</td>
+</tr>
+<tr>
+<td>S</td>
+<td>ㅅ</td>
+<td>/s/</td>
+<td></td>
+</tr>
+<tr>
+<td>T</td>
+<td>ㄸ</td>
+<td>/t/</td>
+<td></td>
+</tr>
+<tr>
+<td>U</td>
+<td>ㅜ</td>
+<td>/u/</td>
+<td></td>
+</tr>
+<tr>
+<td>V</td>
+<td>ㅂ</td>
+<td>/b/</td>
+<td>Igual que B</td>
+</tr>
+<tr>
+<td>W</td>
+<td>ㅜ<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td>/w/</td>
+<td></td>
+</tr>
+<tr>
+<td>X</td>
+<td>ㅅ, ㅎ</td>
+<td>/s/, /x/, /ks/<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></td>
+<td>El fonema utilizado depende de la palabra</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>ㅋ</td>
+<td>/ʝ/</td>
+<td></td>
+</tr>
+<tr>
+<td>Z</td>
+<td>ㅆ</td>
+<td>/θ/<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Puedes usar esta tabla como referencia si más adelante quieres recordar el jamo (o fonema) que le corresponde a una determinada letra.   </p>
+<p><strong>→ Continuar con <a href="/lingokesto/not_created.html" class="nonexistent-link">???</a></strong>   </p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>/θ/ se realiza como /s/ fuera de España, pero al igual que en la ortografía normal, en Jangul se conserva la distinción entre estos fonemas, sin importar el acento del hablante (⟨C c⟩ y ⟨Z z⟩ representan /θ/, mientras que ⟨S s⟩ representa /s/; compara «casar» con «cazar»)&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 0 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 0 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>/w/ se escribe como si fuera /u/, pero por ser consonante hay que tener varias consideraciones que explicaré más adelante&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>/ks/, por ser un clúster de consonantes, debe escribirse de una forma que describiré más adelante&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></div>
+<div class="note-footer">
+<div class="backlinks" style="display:none"></div>
+
+<div class="tags">
+
+</div>
+
+</div>
+<div class="graph requires_js ">
+    <div id="A336306026630910548893435388507036423384{level}" class="graph_div"></div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B336306026630910548893435388507036423384{level}" level="{level}" note_temp_id="336306026630910548893435388507036423384" onclick="window.ObsHtmlGraph.run(this, '336306026630910548893435388507036423384', 'letras y jamos');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C336306026630910548893435388507036423384{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('/lingokesto/obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="/lingokesto/obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>
