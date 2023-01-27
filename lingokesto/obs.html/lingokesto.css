@@ -10,7 +10,7 @@
 	/* Others */
 	--custom-divider-colour: #555;
 	--custom-sidepane-colour: #282828;
-	--custom-accent-colour: #337ba4;
+	--custom-accent-colour: #c95413;
 }
 
 /* Applies to everything */
@@ -339,7 +339,7 @@ div.graph_div_full {
 	.search-highlights em {
 		font-weight: 500;
 	}
-	/* These are brighter/darker shades of #337ba4, the accent colour */
+	/* These are brighter/darker shades of #337ba4, the accent colour of the Notkesto */
 	.theme-light .search-highlights em,
 	.theme-obs-light .search-highlights em {
 		background-color: #d4e7f1 !important;
