@@ -278,6 +278,7 @@
 		<li><a class="" href="/notkesto/Mathematics/Angle Between Lines.html"  >Angle Between Lines</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Angle Between Planes.html"  >Angle Between Planes</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Approximation Order of a Function.html"  >Approximation Order of a Function</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Arc.html"  >Arc</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Arc Length.html"  >Arc Length</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Associated Matrix of Composed Transformations.html"  >Associated Matrix of Composed Transformations</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Associated Matrix of Operated Transformations.html"  >Associated Matrix of Operated Transformations</a></li>
@@ -360,6 +361,7 @@
 		<li><a class="" href="/notkesto/Mathematics/Metric Space.html"  >Metric Space</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Minimal and Maximal.html"  >Minimal and Maximal</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Minimum and Maximum.html"  >Minimum and Maximum</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Multi-Edge.html"  >Multi-Edge</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Norm.html"  >Norm</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Norm under Real Numbers.html"  >Norm under Real Numbers</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Normalised Form of Real Numbers.html"  >Normalised Form of Real Numbers</a></li>
@@ -399,6 +401,7 @@
 		<li><a class="" href="/notkesto/Mathematics/Sequence.html"  >Sequence</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Series.html"  >Series</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Stability of a Numerical Method.html"  >Stability of a Numerical Method</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Subjacent Graph.html"  >Subjacent Graph</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Subsequence.html"  >Subsequence</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Supremum and Infimum.html"  >Supremum and Infimum</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Surjective Linear Transformations.html"  >Surjective Linear Transformations</a></li>
@@ -407,6 +410,7 @@
 		<li><a class="" href="/notkesto/Mathematics/Taylor Theorem.html"  >Taylor Theorem</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Total Order Relation.html"  >Total Order Relation</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Two Line Cases.html"  >Two Line Cases</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Types of Graphs.html"  >Types of Graphs</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Upper and Lower Bounds.html"  >Upper and Lower Bounds</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Vector Space.html"  >Vector Space</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Vector-Valued Function.html"  >Vector-Valued Function</a></li>
@@ -462,20 +466,40 @@
 <hr />
 <p>A <em>graph</em> <span class="arithmatex">\(G = \{ V, E \}\)</span> is a mathematical structure that consists of two finite <a href="/notkesto/not_created.html" class="nonexistent-link">sets</a> <span class="arithmatex">\(V\)</span> and <span class="arithmatex">\(E\)</span>.    </p>
 <ul>
-<li>The elements of <span class="arithmatex">\(V\)</span> are called <a href="/notkesto/Mathematics/Vertex.html">vertices or nodes</a>. The cardinality of <span class="arithmatex">\(V\)</span> is what we call the <em>order</em> of <span class="arithmatex">\(G\)</span>.   </li>
-<li>The elements of <span class="arithmatex">\(E\)</span> are called <a href="/notkesto/Mathematics/Edge.html">edges</a>. The cardinality of <span class="arithmatex">\(E\)</span> is what we call the size of <span class="arithmatex">\(G\)</span>.   </li>
+<li>The elements of <span class="arithmatex">\(V\)</span> are called <a href="/notkesto/Mathematics/Vertex.html">vertices or nodes</a>.   </li>
+<li>The elements of <span class="arithmatex">\(E\)</span> are called <a href="/notkesto/Mathematics/Edge.html">edges</a>.   </li>
 <li>The set of vertices must be a non-empty set, but the set of lines can empty.   </li>
 </ul>
 <p>We can use graphs to represent the relationship between different elements. A <a href="/notkesto/Mathematics/Digraph.html">digraph</a> is an example of a graph.   </p>
-<p>The following is a graph with vertices <span class="arithmatex">\(A, B, C, D\)</span> and edges <span class="arithmatex">\(f, g, h, i\)</span>:   </p>
-<p><img src="/notkesto/Assets/Graph.png"  width="400" alt="" title="" />   </p>
-<h1 id="types">Types</h1>
-<p>A <em>null graph</em> is a graph that has no vertices or edges.   </p>
-<p>A <em>trivial graph</em> is a graph that consists of a single vertex with no edges.   </p>
-<p>A <em>proper graph</em> is a graph with an edge that joins two different vertices.   </p>
-<p>A <em>general graph</em> (or <em>pseudo-graph</em>) is a graph that consists of at least one loop or at least one multi-edge (i.e. various edges connected to one same vertex).   </p>
-<p>A <em>multi-graph</em> (or <em>loop-less graph</em>) is a graph that has at least one multi-edge, but no loops.   </p>
-<p>A <em>simple graph</em> is a graph that has no loops or multi-edges. This is the type of graphs we'll simply call a <em>graph</em>. When we refer to other types of graph, we will specify them.</p></div>
+<p>Graphs can be of <a href="/notkesto/Mathematics/Types%20of%20Graphs.html">several types</a>.   </p>
+<div class="callout callout-info active" rasa="1">
+<div class="callout-title">
+<div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+</div>
+<div class="callout-title-name">Order and Cardinality <br />
+</div>
+</div>
+<div class="callout-content">
+<p>The <em>order</em> of <span class="arithmatex">\(G\)</span> is the cardinality of <span class="arithmatex">\(V\)</span>, while the <em>size</em> of <span class="arithmatex">\(G\)</span> is the cardinality of <span class="arithmatex">\(E\)</span>. <br />
+</p>
+</div>
+</div>
+<div class="callout callout-example active callout-folded" rasa="1">
+<div class="callout-title" onclick="toggle(this.parentElement)">
+<div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+</div>
+<div class="callout-title-name">Example
+</div>
+<div class="callout-title-fold"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ChevronDown"><polyline points="6 9 12 15 18 9"></polyline>
+</div>
+</div>
+<div class="callout-content">
+<p>The following is a graph with vertices <span class="arithmatex">\(A, B, C, D\)</span> and edges <span class="arithmatex">\(f, g, h, i\)</span>: <br />
+</p>
+<p><img src="/notkesto/Assets/Graph.png"  width="400" alt="" title="" />
+</p>
+</div>
+</div></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
@@ -485,6 +509,10 @@
 	<li><a class="backlink" href="/notkesto/Mathematics/Edge.html">edge</a></li>
 	<li><a class="backlink" href="/notkesto/Mathematics/Open Neighbourhood.html">open neighbourhood</a></li>
 	<li><a class="backlink" href="/notkesto/Mathematics/Closed Neighbourhood.html">closed neighbourhood</a></li>
+	<li><a class="backlink" href="/notkesto/Mathematics/Types of Graphs.html">types of graphs</a></li>
+	<li><a class="backlink" href="/notkesto/Mathematics/Arc.html">arc</a></li>
+	<li><a class="backlink" href="/notkesto/Mathematics/Subjacent Graph.html">subjacent graph</a></li>
+	<li><a class="backlink" href="/notkesto/Mathematics/Multi-Edge.html">multi-edge</a></li>
 	<li><a class="backlink" href="/notkesto/MAC/4th Semester/Teoría de Gráficas.html">teoría de gráficas</a></li>
 	<li><a class="backlink" href="/notkesto/Computing/Tree.html">tree</a></li>
 </ul>
@@ -493,20 +521,20 @@
 <div class="tags">
 <h2>Tags</h2>
 <ul>
-	<li><a class="backlink" href="/notkesto/obs.html/tags/🌳/index.html">🌳</a></li>
 	<li><a class="backlink" href="/notkesto/obs.html/tags/MAC/S4/TG/index.html">MAC/S4/TG</a></li>
+	<li><a class="backlink" href="/notkesto/obs.html/tags/🌳/index.html">🌳</a></li>
 </ul>
 </div>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A172224085007689456869281236368810595454{level}" class="graph_div"></div>
+    <div id="A230043203167394420219495103270639102524{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B172224085007689456869281236368810595454{level}" level="{level}" note_temp_id="172224085007689456869281236368810595454" onclick="window.ObsHtmlGraph.run(this, '172224085007689456869281236368810595454', 'graph');">
+        <button class="graph_button graph_show_button" id="B230043203167394420219495103270639102524{level}" level="{level}" note_temp_id="230043203167394420219495103270639102524" onclick="window.ObsHtmlGraph.run(this, '230043203167394420219495103270639102524', 'graph');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C172224085007689456869281236368810595454{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C230043203167394420219495103270639102524{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
