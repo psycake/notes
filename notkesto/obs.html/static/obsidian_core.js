@@ -10,7 +10,7 @@ var CONFIGURED_HTML_URL_PREFIX = "/notkesto";
 var RELATIVE_PATHS = 0;
 var documentation_mode = 1;
 var tab_mode = !no_tab_mode;
-var gzip_hash = '283763540346675932357361259295674521258'                       // used to check whether the localStorage data is stale
+var gzip_hash = '26966800020010205693303627376518333154'                       // used to check whether the localStorage data is stale
 
 // global cache
 var fn_cache_ls_available = null;
