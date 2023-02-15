@@ -278,6 +278,7 @@
 		<li><a class="" href="/notkesto/Mathematics/Angle Between Lines.html"  >Angle Between Lines</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Angle Between Planes.html"  >Angle Between Planes</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Angle Between Vectors.html"  >Angle Between Vectors</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Antiderivative of a Vector-Valued Function.html"  >Antiderivative of a Vector-Valued Function</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Approximation Order of a Function.html"  >Approximation Order of a Function</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Arc.html"  >Arc</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Arc Length.html"  >Arc Length</a></li>
@@ -310,6 +311,7 @@
 		<li><a class="" href="/notkesto/Mathematics/Convergence Tests for Series.html"  >Convergence Tests for Series</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Coordinate Vector.html"  >Coordinate Vector</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Curve.html"  >Curve</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Defined Integral of a Vector-Valued Function.html"  >Defined Integral of a Vector-Valued Function</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Derivative of Operated Vector-Valued Functions.html"  >Derivative of Operated Vector-Valued Functions</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Derivative of a Vector-Valued Function.html"  >Derivative of a Vector-Valued Function</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Diagonal Associated Matrix.html"  >Diagonal Associated Matrix</a></li>
@@ -481,54 +483,54 @@
 <p>The <code>config.yml</code> that I use is:   </p>
 <div class="lang-yaml">
 
-<div class="codehilite"><pre><span></span><code><span class="c1"># Paths</span><span class="w"></span>
-<span class="nt">obsidian_entrypoint_path_str</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&lt;full</span><span class="nv"> </span><span class="s">local</span><span class="nv"> </span><span class="s">path</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">Index.md&gt;&#39;</span><span class="w"></span>
-<span class="nt">html_output_folder_path_str</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&lt;full</span><span class="nv"> </span><span class="s">local</span><span class="nv"> </span><span class="s">path&gt;&#39;</span><span class="w"></span>
-<span class="nt">exclude_glob</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/output</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Paths</span>
+<span class="nt">obsidian_entrypoint_path_str</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&lt;full</span><span class="nv"> </span><span class="s">local</span><span class="nv"> </span><span class="s">path</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">Index.md&gt;&#39;</span>
+<span class="nt">html_output_folder_path_str</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&lt;full</span><span class="nv"> </span><span class="s">local</span><span class="nv"> </span><span class="s">path&gt;&#39;</span>
+<span class="nt">exclude_glob</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/output</span>
 
-<span class="c1"># HTML output</span><span class="w"></span>
-<span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Notkesto</span><span class="w"></span>
-<span class="nt">html_custom_inclusions</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;&lt;link</span><span class="nv"> </span><span class="s">rel=&quot;stylesheet&quot;</span><span class="nv"> </span><span class="s">href=&quot;/obs.html/custom.css&quot;/&gt;&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;&lt;link</span><span class="nv"> </span><span class="s">rel=&quot;stylesheet&quot;</span><span class="nv"> </span><span class="s">href=&quot;https://fonts.googleapis.com/css?family=Inter&quot;/&gt;&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;&lt;link</span><span class="nv"> </span><span class="s">rel=&quot;stylesheet&quot;</span><span class="nv"> </span><span class="s">href=&quot;https://fonts.googleapis.com/css?family=JetBrains+Mono&quot;/&gt;&#39;</span><span class="w"></span>
-<span class="nt">navbar_links</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;🏠️</span><span class="nv"> </span><span class="s">Home&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">link</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;index.html&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;💻️</span><span class="nv"> </span><span class="s">MAC&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">link</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Mathematics/Matemáticas</span><span class="nv"> </span><span class="s">Aplicadas</span><span class="nv"> </span><span class="s">y</span><span class="nv"> </span><span class="s">Computación.html&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;👾</span><span class="nv"> </span><span class="s">GitHub&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">link</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;https://github.com/psycake/notkesto&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external</span><span class="w"></span>
-<span class="nt">file_exports</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">encoding</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">binary</span><span class="w"></span>
-<span class="w">    </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&lt;full</span><span class="nv"> </span><span class="s">local</span><span class="nv"> </span><span class="s">path</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">favicon.ico&gt;&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">dst</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">favicon.ico</span><span class="w"></span>
+<span class="c1"># HTML output</span>
+<span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Notkesto</span>
+<span class="nt">html_custom_inclusions</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;&lt;link</span><span class="nv"> </span><span class="s">rel=&quot;stylesheet&quot;</span><span class="nv"> </span><span class="s">href=&quot;/obs.html/custom.css&quot;/&gt;&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;&lt;link</span><span class="nv"> </span><span class="s">rel=&quot;stylesheet&quot;</span><span class="nv"> </span><span class="s">href=&quot;https://fonts.googleapis.com/css?family=Inter&quot;/&gt;&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;&lt;link</span><span class="nv"> </span><span class="s">rel=&quot;stylesheet&quot;</span><span class="nv"> </span><span class="s">href=&quot;https://fonts.googleapis.com/css?family=JetBrains+Mono&quot;/&gt;&#39;</span>
+<span class="nt">navbar_links</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;🏠️</span><span class="nv"> </span><span class="s">Home&#39;</span>
+<span class="w">    </span><span class="nt">link</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;index.html&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;💻️</span><span class="nv"> </span><span class="s">MAC&#39;</span>
+<span class="w">    </span><span class="nt">link</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Mathematics/Matemáticas</span><span class="nv"> </span><span class="s">Aplicadas</span><span class="nv"> </span><span class="s">y</span><span class="nv"> </span><span class="s">Computación.html&#39;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;👾</span><span class="nv"> </span><span class="s">GitHub&#39;</span>
+<span class="w">    </span><span class="nt">link</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;https://github.com/psycake/notkesto&#39;</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external</span>
+<span class="nt">file_exports</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">encoding</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">binary</span>
+<span class="w">    </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&lt;full</span><span class="nv"> </span><span class="s">local</span><span class="nv"> </span><span class="s">path</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">favicon.ico&gt;&#39;</span>
+<span class="w">    </span><span class="nt">dst</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">favicon.ico</span>
 
-<span class="c1"># Features</span><span class="w"></span>
-<span class="nt">toggles</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">process_all</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">  </span><span class="nt">allow_duplicate_filenames_in_root</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
-<span class="w">  </span><span class="nt">no_clean</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">  </span><span class="nt">features</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">styling</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">accent_color</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;#337ba4&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">mermaid_diagrams</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
-<span class="w">    </span><span class="nt">create_index_from_dir_structure</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">exclude_subfolders</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;.git&#39;</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;__src&#39;</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;md&#39;</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;obs.html&#39;</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;Assets&#39;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">exclude_files</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;.gitignore&#39;</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;favicon.ico&#39;</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;not_created.html&#39;</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;CNAME&#39;</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;README.md&#39;</span><span class="w"></span>
+<span class="c1"># Features</span>
+<span class="nt">toggles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">process_all</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">allow_duplicate_filenames_in_root</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">no_clean</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">features</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">styling</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">accent_color</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;#337ba4&#39;</span>
+<span class="w">    </span><span class="nt">mermaid_diagrams</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">create_index_from_dir_structure</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">exclude_subfolders</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;.git&#39;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;__src&#39;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;md&#39;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;obs.html&#39;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;Assets&#39;</span>
+<span class="w">      </span><span class="nt">exclude_files</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;.gitignore&#39;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;favicon.ico&#39;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;not_created.html&#39;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;CNAME&#39;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;README.md&#39;</span>
 </code></pre></div>
 
 
@@ -554,13 +556,13 @@
 
 </div>
 <div class="graph requires_js ">
-    <div id="A316860770229379452684666231371249633877{level}" class="graph_div"></div>
+    <div id="A177795753406008291107214716711175599301{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B316860770229379452684666231371249633877{level}" level="{level}" note_temp_id="316860770229379452684666231371249633877" onclick="window.ObsHtmlGraph.run(this, '316860770229379452684666231371249633877', 'obsidian-html');">
+        <button class="graph_button graph_show_button" id="B177795753406008291107214716711175599301{level}" level="{level}" note_temp_id="177795753406008291107214716711175599301" onclick="window.ObsHtmlGraph.run(this, '177795753406008291107214716711175599301', 'obsidian-html');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C316860770229379452684666231371249633877{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C177795753406008291107214716711175599301{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
