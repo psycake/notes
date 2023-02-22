@@ -10,7 +10,7 @@
 	/* Others */
 	--custom-divider-colour: #555;
 	--custom-sidepane-colour: #282828;
-	--custom-accent-colour: #c95413;
+	--custom-accent-colour: #337ba4;
 }
 
 /* Applies to everything */
@@ -147,9 +147,11 @@ body {
 
 /* Hide right pane; should be temporary until v3.4.0 */
 /* Most of the pane modifs apply to both headers nonetheless */
+/*
 .right_pane {
 	display: none !important;
 }
+*/
 
 .theme-obs-light .left_pane,
 .theme-obs-dark .left_pane,
@@ -339,7 +341,7 @@ div.graph_div_full {
 	.search-highlights em {
 		font-weight: 500;
 	}
-	/* These are brighter/darker shades of #337ba4, the accent colour of the Notkesto */
+	/* These are brighter/darker shades of #337ba4, the accent colour */
 	.theme-light .search-highlights em,
 	.theme-obs-light .search-highlights em {
 		background-color: #d4e7f1 !important;

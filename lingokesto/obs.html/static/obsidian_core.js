@@ -3,14 +3,14 @@
 // Globals (filled in by backend)
 var no_tab_mode = 1;
 var mermaid_enabled = 0;
-var toc_pane_div = "right_pane_content";
+var toc_pane_div = "";
 var dir_index_pane_div = "";
 var html_url_prefix = "/lingokesto";
 var CONFIGURED_HTML_URL_PREFIX = "/lingokesto";
 var RELATIVE_PATHS = 0;
 var documentation_mode = 1;
 var tab_mode = !no_tab_mode;
-var gzip_hash = '181265847148795315632699265856356926860'                       // used to check whether the localStorage data is stale
+var gzip_hash = '73460452614406956939974415843262707668'                       // used to check whether the localStorage data is stale
 
 // global cache
 var fn_cache_ls_available = null;

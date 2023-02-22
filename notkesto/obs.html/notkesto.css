@@ -100,6 +100,7 @@ body {
 	/* Since we hide the right pane below, hide its toggle too */
 	display: none !important;
 }
+
 .theme-obs-light .left_pane_toggle_nav,
 .theme-obs-light .right_pane_toggle_nav,
 .theme-obs-dark .left_pane_toggle_nav,
@@ -147,9 +148,11 @@ body {
 
 /* Hide right pane; should be temporary until v3.4.0 */
 /* Most of the pane modifs apply to both headers nonetheless */
+/*
 .right_pane {
 	display: none !important;
 }
+*/
 
 .theme-obs-light .left_pane,
 .theme-obs-dark .left_pane,
