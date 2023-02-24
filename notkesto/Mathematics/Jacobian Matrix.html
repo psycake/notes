@@ -290,6 +290,7 @@
 		<li><a class="" href="/notkesto/Mathematics/Bayes' Theorem.html"  >Bayes' Theorem</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Bijective Linear Transformations.html"  >Bijective Linear Transformations</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Binormal Vector.html"  >Binormal Vector</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Bipartite Graph.html"  >Bipartite Graph</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Bisection Method.html"  >Bisection Method</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Boolean Matrix.html"  >Boolean Matrix</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Boundary Point.html"  >Boundary Point</a></li>
@@ -307,9 +308,11 @@
 		<li><a class="" href="/notkesto/Mathematics/Combination.html"  >Combination</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Compact Set.html"  >Compact Set</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Comparability.html"  >Comparability</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Complete Graph.html"  >Complete Graph</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Composition of Relations.html"  >Composition of Relations</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Conditional Probability.html"  >Conditional Probability</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Conjugate Transpose Matrix.html"  >Conjugate Transpose Matrix</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Connected Graph.html"  >Connected Graph</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Continuous Function.html"  >Continuous Function</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Continuous Vector-Valued Function.html"  >Continuous Vector-Valued Function</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Contour Line.html"  >Contour Line</a></li>
@@ -438,6 +441,7 @@
 		<li><a class="" href="/notkesto/Mathematics/Simple Trajectory.html"  >Simple Trajectory</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Smooth Curve.html"  >Smooth Curve</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Stability of a Numerical Method.html"  >Stability of a Numerical Method</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Strongly Connected Graph.html"  >Strongly Connected Graph</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Subjacent Graph.html"  >Subjacent Graph</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Subsequence.html"  >Subsequence</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Supremum and Infimum.html"  >Supremum and Infimum</a></li>
@@ -507,13 +511,13 @@
 <hr />
 <p><em><strong>(definition)</strong></em>   </p>
 <p>In the context of <a href="/notkesto/not_created.html" class="nonexistent-link">partial derivatives</a>, the <em>Jacobian matrix</em> for a <a href="/notkesto/Mathematics/Function.html">function</a> <span class="arithmatex">\(f : \mathbb{R}^{n} \to \mathbb{R}^{m}\)</span> is defined as:   </p>
-<p><span class="arithmatex">\(<span class="arithmatex">\(J(x_{1}, x_{2}, \dots, x_{n}) = 
+<div class="arithmatex">\[J(x_{1}, x_{2}, \dots, x_{n}) = 
 \begin{pmatrix}
 \frac{\partial f_1}{\partial x_1} &amp; \frac{\partial f_1}{\partial x_2} &amp; \dots &amp; \frac{\partial f_1}{\partial x_n} \\
 \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
 \frac{\partial f_m}{\partial x_1} &amp; \frac{\partial f_m}{\partial x_2} &amp; \dots &amp; \frac{\partial f_m}{\partial x_n} \\
-\end{pmatrix}\)</span>\)</span> <br />
-…where <span class="arithmatex">\(f = (f_{1}, f_{2}, \dots, f_{n})\)</span>.   </p>
+\end{pmatrix}\]</div>
+<p>…where <span class="arithmatex">\(f = (f_{1}, f_{2}, \dots, f_{n})\)</span>.   </p>
 <div class="callout callout-example active callout-folded" rasa="1">
 <div class="callout-title" onclick="toggle(this.parentElement)">
 <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
@@ -550,13 +554,13 @@
 
 </div>
 <div class="graph requires_js ">
-    <div id="A260199538805458658676224599993848821556{level}" class="graph_div"></div>
+    <div id="A329998038212696718224999208625112926248{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B260199538805458658676224599993848821556{level}" level="{level}" note_temp_id="260199538805458658676224599993848821556" onclick="window.ObsHtmlGraph.run(this, '260199538805458658676224599993848821556', 'jacobian matrix');">
+        <button class="graph_button graph_show_button" id="B329998038212696718224999208625112926248{level}" level="{level}" note_temp_id="329998038212696718224999208625112926248" onclick="window.ObsHtmlGraph.run(this, '329998038212696718224999208625112926248', 'jacobian matrix');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C260199538805458658676224599993848821556{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C329998038212696718224999208625112926248{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

@@ -290,6 +290,7 @@
 		<li><a class="" href="/notkesto/Mathematics/Bayes' Theorem.html"  >Bayes' Theorem</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Bijective Linear Transformations.html"  >Bijective Linear Transformations</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Binormal Vector.html"  >Binormal Vector</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Bipartite Graph.html"  >Bipartite Graph</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Bisection Method.html"  >Bisection Method</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Boolean Matrix.html"  >Boolean Matrix</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Boundary Point.html"  >Boundary Point</a></li>
@@ -307,9 +308,11 @@
 		<li><a class="" href="/notkesto/Mathematics/Combination.html"  >Combination</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Compact Set.html"  >Compact Set</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Comparability.html"  >Comparability</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Complete Graph.html"  >Complete Graph</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Composition of Relations.html"  >Composition of Relations</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Conditional Probability.html"  >Conditional Probability</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Conjugate Transpose Matrix.html"  >Conjugate Transpose Matrix</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Connected Graph.html"  >Connected Graph</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Continuous Function.html"  >Continuous Function</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Continuous Vector-Valued Function.html"  >Continuous Vector-Valued Function</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Contour Line.html"  >Contour Line</a></li>
@@ -438,6 +441,7 @@
 		<li><a class="" href="/notkesto/Mathematics/Simple Trajectory.html"  >Simple Trajectory</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Smooth Curve.html"  >Smooth Curve</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Stability of a Numerical Method.html"  >Stability of a Numerical Method</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Strongly Connected Graph.html"  >Strongly Connected Graph</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Subjacent Graph.html"  >Subjacent Graph</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Subsequence.html"  >Subsequence</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Supremum and Infimum.html"  >Supremum and Infimum</a></li>
@@ -506,13 +510,14 @@
 <div class="content"><p><strong>Topics:</strong> <a href="/notkesto/Mathematics/Graph.html">Graph</a>   </p>
 <hr />
 <p><em><strong>(definition)</strong></em>   </p>
-<p><a href="/notkesto/Mathematics/Graph.html">Graphs</a> can be of the following types:   </p>
+<p><a href="/notkesto/Mathematics/Graph.html">Graphs</a> can be of several types.   </p>
+<h1 id="basic-graphs">Basic Graphs</h1>
 <ul>
 <li>
 <p>A graph with only <a href="/notkesto/Mathematics/Arc.html">arcs</a> is called a <em>directed graph</em>, while a graph with no arcs is called a <em>non-directed graph</em>. A graph with both arcs and non-directed edges is called a <em>mixed graph</em>.   </p>
-</li>
-<li>
-<p>These two concepts help us define a <a href="/notkesto/Mathematics/Subjacent%20Graph.html">subjacent graph</a>.   </p>
+<ul>
+<li>These two concepts help us define a <a href="/notkesto/Mathematics/Subjacent%20Graph.html">subjacent graph</a>.   </li>
+</ul>
 </li>
 <li>
 <p>A <em>null graph</em> is a graph that has no vertices or edges.   </p>
@@ -529,11 +534,29 @@
 <li>
 <p>A <em>multi-graph</em> (or <em>loop-less graph</em>) is a graph that has at least one multi-edge, but no loops.   </p>
 </li>
+</ul>
+<h1 id="nice-graphs">Nice Graphs</h1>
+<ul>
 <li>
-<p><a href="/notkesto/Mathematics/Simple%20Graph.html">Simple graph</a>   </p>
+<p>A <a href="/notkesto/Mathematics/Simple%20Graph.html">simple graph</a> is a graph with no multi-edges or loops.   </p>
 </li>
 <li>
-<p><a href="/notkesto/Mathematics/Regular%20Graph.html">Regular graph</a></p>
+<p>A <a href="/notkesto/Mathematics/Regular%20Graph.html">regular graph</a> whose vertices all have the same <a href="/notkesto/Mathematics/Vertex%20Degree.html">degree</a>.   </p>
+</li>
+<li>
+<p>A <a href="/notkesto/Mathematics/Complete%20Graph.html">complete graph</a> is a graph where every vertex pair is joined by an edge.   </p>
+</li>
+<li>
+<p>A <a href="/notkesto/Mathematics/Bipartite%20Graph.html">bipartite graph</a> is a graph that can be "separated" into two interconnected graphs   </p>
+</li>
+</ul>
+<h1 id="connected-graphs">Connected Graphs</h1>
+<ul>
+<li>
+<p>A <a href="/notkesto/Mathematics/Connected%20Graph.html">connected graph</a> is a graph where we can reach any vertex from any other one.   </p>
+<ul>
+<li>A <a href="/notkesto/Mathematics/Strongly%20Connected%20Graph.html">strongly connected graph</a> is a connected graph where we can also reach any given vertex from itself.</li>
+</ul>
 </li>
 </ul></div>
 <div class="note-footer">
@@ -551,20 +574,20 @@
 <div class="tags">
 <h2>Tags</h2>
 <ul>
-	<li><a class="backlink" href="/notkesto/obs.html/tags/MAC/S4/TG/index.html">MAC/S4/TG</a></li>
 	<li><a class="backlink" href="/notkesto/obs.html/tags/🌳/index.html">🌳</a></li>
+	<li><a class="backlink" href="/notkesto/obs.html/tags/MAC/S4/TG/index.html">MAC/S4/TG</a></li>
 </ul>
 </div>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A303839308042473825839839511530442702135{level}" class="graph_div"></div>
+    <div id="A203804594851007975382482627563717832051{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B303839308042473825839839511530442702135{level}" level="{level}" note_temp_id="303839308042473825839839511530442702135" onclick="window.ObsHtmlGraph.run(this, '303839308042473825839839511530442702135', 'types of graphs');">
+        <button class="graph_button graph_show_button" id="B203804594851007975382482627563717832051{level}" level="{level}" note_temp_id="203804594851007975382482627563717832051" onclick="window.ObsHtmlGraph.run(this, '203804594851007975382482627563717832051', 'types of graphs');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C303839308042473825839839511530442702135{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C203804594851007975382482627563717832051{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
