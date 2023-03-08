@@ -5,7 +5,7 @@
         <head>
                 <!-- Page information -->
                 <meta charset="UTF-8" />
-                <meta name="node_id" content="teoría de gráficas">
+                <meta name="node_id" content="random variable">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="shortcut icon" href="/notkesto/favicon.ico" />
 
@@ -48,9 +48,9 @@
 
                 <!-- Onload tweaks -->
                 <script>
-                        const CURRENT_NODE = 'teoría de gráficas';
+                        const CURRENT_NODE = 'random variable';
                         const HTML_URL_PREFIX = '/notkesto';
-                        const PAGE_DEPTH = 2;
+                        const PAGE_DEPTH = 1;
                 </script>
         </head>
 
@@ -165,7 +165,7 @@
                 }
         </script>
                                     <div class="graph_header_div requires_js">
-            <a id="graph_link" class="system-link" href="/notkesto/obs.html/graph/index.html?node=teoría de gráficas" title="Open fullpage Graph">
+            <a id="graph_link" class="system-link" href="/notkesto/obs.html/graph/index.html?node=random variable" title="Open fullpage Graph">
                     <img class="graph_header_div_svg" src = "/notkesto/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
             </a>
         </div>
@@ -246,7 +246,7 @@
 	</ul>
 </div>
 <button id="folder-3" class="dir-button folder_note " href="/notkesto/MAC/MAC.html" onclick="open_folder_note(this)"><div class="fn_pf"></div>MAC</button>
-<div id="folder-container-3" class="dir-container requires_js active" path="/notkesto/MAC">
+<div id="folder-container-3" class="dir-container requires_js " path="/notkesto/MAC">
 	<button id="folder-4" class="dir-button" onclick="toggle_dir(this.id)">3rd Semester</button>
 	<div id="folder-container-4" class="dir-container requires_js " path="/notkesto/MAC/3rd Semester">
 		<ul class="dir-list">
@@ -256,7 +256,7 @@
 		</ul>
 	</div>
 	<button id="folder-5" class="dir-button" onclick="toggle_dir(this.id)">4th Semester</button>
-	<div id="folder-container-5" class="dir-container requires_js active" path="/notkesto/MAC/4th Semester">
+	<div id="folder-container-5" class="dir-container requires_js " path="/notkesto/MAC/4th Semester">
 		<ul class="dir-list">
 			<li><a class="" href="/notkesto/MAC/4th Semester/Bases de Datos.html"  >Bases de Datos</a></li>
 			<li><a class="" href="/notkesto/MAC/4th Semester/Cálculo IV.html"  >Cálculo IV</a></li>
@@ -268,7 +268,7 @@
 	</ul>
 </div>
 <button id="folder-6" class="dir-button" onclick="toggle_dir(this.id)">Mathematics</button>
-<div id="folder-container-6" class="dir-container requires_js " path="/notkesto/Mathematics">
+<div id="folder-container-6" class="dir-container requires_js active" path="/notkesto/Mathematics">
 	<ul class="dir-list">
 		<li><a class="" href="/notkesto/Mathematics/Absolute Error.html"  >Absolute Error</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Absolute Minimal and Maximal Elements.html"  >Absolute Minimal and Maximal Elements</a></li>
@@ -524,53 +524,65 @@
     </div>
 </div>
                         <div class="container">
-                                <embeddedtitle>Teoría de gráficas</embeddedtitle>
-<div class="content"><h1 id="graphs">Graphs</h1>
-<p>A <a href="/notkesto/Mathematics/Graph.html">graph</a> is a structure that has a set of <a href="/notkesto/Mathematics/Vertex.html">vertices</a> and a set of <a href="/notkesto/Mathematics/Edge.html">edges</a>. Edges link together vertices. Graphs can be represented graphically:   </p>
-<p><img src="/notkesto/Assets/Graph-1.png"  width="300" alt="" title="" />   </p>
-<p>There are <a href="/notkesto/Mathematics/Types%20of%20Graphs.html">several types of graphs</a>, the most important one of them being the <a href="/notkesto/Mathematics/Simple%20Graph.html">simple graph</a>. A simple graph whose vertices have all the same degree is called a <a href="/notkesto/Mathematics/Regular%20Graph.html">regular graph</a>.   </p>
-<p>Just like many other mathematical structures, <a href="/notkesto/Mathematics/Isomorphic%20Graphs.html">graphs can be isomorphic</a>.   </p>
-<p>Graphs contained within other graphs are called <a href="/notkesto/Mathematics/Subgraph.html">subgraphs</a>. We can have <a href="/notkesto/Mathematics/Edge-Disjoint%20Subgraphs.html">edge-disjoint</a> and <a href="/notkesto/Mathematics/Vertex-Disjoint%20Subgraphs.html">vertex-disjoint</a> subgraphs, as well as <a href="/notkesto/Mathematics/Expanded%20Subgraph.html">expanded subgraphs</a>.    </p>
-<h1 id="vertices-and-edges">Vertices and Edges</h1>
-<p>Each vertex in a graph has an <a href="/notkesto/Mathematics/Open%20Neighbourhood.html">open</a> and a <a href="/notkesto/Mathematics/Closed%20Neighbourhood.html">closed</a> neighbourhood. A vertex where several edges incide is called a <a href="/notkesto/Mathematics/Multi-Edge.html">multi-edge</a>. The amount of edges that incide on a vertex define its <a href="/notkesto/Mathematics/Vertex%20Degree.html">degree</a>.   </p>
-<p>Edges with a direction are called <a href="/notkesto/Mathematics/Arc.html">arcs</a>.   </p>
-<p>When we remove all the directions from a graph <span class="arithmatex">\(G\)</span> with all arcs, we get <span class="arithmatex">\(G\)</span>'s <a href="/notkesto/Mathematics/Subjacent%20Graph.html">subjacent graph</a>.   </p>
-<h1 id="algorithms-lemmas-and-principles">Algorithms, Lemmas and Principles</h1>
-<p>By using the <a href="/notkesto/Mathematics/Havel-Hakimi%20Algorithm.html">Havel-Hakimi algorithm</a>, we can determine if a given non-increasing sequence of integers corresponds to the sequence of vertex degrees of a simple graph.   </p>
-<p>The <a href="/notkesto/Mathematics/Handshaking%20Lemma.html">Handshaking lemma</a> tells us that given a graph with no edges, the sum of its vertices is always twice its number of edges.   </p>
-<p>The <a href="/notkesto/Mathematics/Pigeonhole%20Principle.html">Pigeonhole principle</a> tells us that, given <span class="arithmatex">\(n&gt;m\)</span>, when we try to put <span class="arithmatex">\(n\)</span> objects in <span class="arithmatex">\(m\)</span> containers, then at least one container must be able to hold more than one object.   </p>
-<h1 id="paths">Paths</h1>
-<p>A <a href="/notkesto/Mathematics/Path.html">path</a> is an alternated finite sequence of vertices and degrees. Paths describe a "way" to traverse a graph.   </p>
-<p>There are several types of paths:   </p>
-<ul>
-<li>A <a href="/notkesto/Mathematics/Simple%20Trajectory.html">simple trajectory</a> is an open path with no repeated vertices or edges.   </li>
-<li>A <a href="/notkesto/Mathematics/Circuit.html">circuit</a> is a closed path with no repeated edges, just one repeated vertex.</li>
-</ul></div>
+                                <embeddedtitle>Random variable</embeddedtitle>
+<div class="content"><p><strong>Topics:</strong> <a href="/notkesto/not_created.html" class="nonexistent-link">Probability</a>   </p>
+<hr />
+<p><strong><em>(definition)</em></strong>   </p>
+<p>A <em>random variable</em> <span class="arithmatex">\(X\)</span> is a <a href="/notkesto/not_created.html" class="nonexistent-link">measurable function</a> <span class="arithmatex">\(X : \Omega \to \mathbb{R}\)</span>, with <span class="arithmatex">\(\Omega\)</span> a <a href="/notkesto/Mathematics/Sample%20Space.html">sample space</a>.    </p>
+<p>In a random variable <span class="arithmatex">\(X\)</span>, for any <a href="/notkesto/not_created.html" class="nonexistent-link">set</a> <span class="arithmatex">\(B\)</span>, the following must be satisfied:   </p>
+<div class="arithmatex">\[X^{-1}(B) \in \mathscr{F}\]</div>
+<p>…where <span class="arithmatex">\(\mathscr{F}\)</span> is a <a href="/notkesto/Mathematics/%CF%83-Algebra.html">sigma-algebra</a>.   </p>
+<div class="callout callout-info active" rasa="1">
+<div class="callout-title">
+<div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+</div>
+<div class="callout-title-name">Notation <br />
+</div>
+</div>
+<div class="callout-content">
+<p>Uppercase letters, like <span class="arithmatex">\(X, Y, Z\)</span>, denote the random variable itself. On the other hand, lowercase letters, like <span class="arithmatex">\(x, y, z\)</span>, denote a value that the corresponding random variable may take. <br />
+</p>
+<p>With this, we can write the <a href="/notkesto/not_created.html" class="nonexistent-link">range</a> of a random variable <span class="arithmatex">\(X\)</span> as: <br />
+</p>
+<div class="arithmatex">\[R_X = \{ x_1, x_2, x_3, \dots \}\]</div>
+</div>
+</div>
+<p><strong><em>(observation)</em></strong>   </p>
+<p>If <span class="arithmatex">\(X\)</span> is a random variable, then:   </p>
+<div class="arithmatex">\[e^x, \sqrt{x}, \log(x), x^n, \sin(x), \cos(x)\]</div>
+<p>…are all random variables too.   </p>
+<p>Furthermore, if <span class="arithmatex">\(Y\)</span> is another random variable, then:   </p>
+<div class="arithmatex">\[x+y, xy, \frac{x}{y}\]</div>
+<p>…are also random variables.   </p>
+<h1 id="types">Types</h1>
+<p>A <em>discrete</em> random variable is a random variable that takes values in a finite or <a href="/notkesto/not_created.html" class="nonexistent-link">countably infinite</a> <a href="/notkesto/not_created.html" class="nonexistent-link">set</a>.   </p>
+<p>An <em>absolutely continuous</em> random variable is a random variable that takes values in an interval of <span class="arithmatex">\(\mathbb{R}\)</span>.</p></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
 <ul>
-	<li><a class="backlink" href="/notkesto/MAC/MAC.html">mac</a></li>
+	<li><a class="backlink" href="/notkesto/MAC/4th Semester/Probabilidad.html">probabilidad</a></li>
+	<li><a class="backlink" href="/notkesto/Mathematics/Density Function.html">density function</a></li>
 </ul>
 </div>
 
 <div class="tags">
 <h2>Tags</h2>
 <ul>
-	<li><a class="backlink" href="/notkesto/obs.html/tags/🏫/index.html">🏫</a></li>
-	<li><a class="backlink" href="/notkesto/obs.html/tags/MAC/S4/TG/index.html">MAC/S4/TG</a></li>
+	<li><a class="backlink" href="/notkesto/obs.html/tags/🌳/index.html">🌳</a></li>
+	<li><a class="backlink" href="/notkesto/obs.html/tags/MAC/S4/PB/index.html">MAC/S4/PB</a></li>
 </ul>
 </div>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A264299246169923660255060791572278213280{level}" class="graph_div"></div>
+    <div id="A329649488289158624136811464433779719831{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B264299246169923660255060791572278213280{level}" level="{level}" note_temp_id="264299246169923660255060791572278213280" onclick="window.ObsHtmlGraph.run(this, '264299246169923660255060791572278213280', 'teoría de gráficas');">
+        <button class="graph_button graph_show_button" id="B329649488289158624136811464433779719831{level}" level="{level}" note_temp_id="329649488289158624136811464433779719831" onclick="window.ObsHtmlGraph.run(this, '329649488289158624136811464433779719831', 'random variable');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C264299246169923660255060791572278213280{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C329649488289158624136811464433779719831{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
