@@ -272,6 +272,7 @@
 	<ul class="dir-list">
 		<li><a class="" href="/notkesto/Mathematics/Absolute Error.html"  >Absolute Error</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Absolute Minimal and Maximal Elements.html"  >Absolute Minimal and Maximal Elements</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Absolutely Continuous Random Variable.html"  >Absolutely Continuous Random Variable</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Absolutely Convergent Series.html"  >Absolutely Convergent Series</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Accumulation Point.html"  >Accumulation Point</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Addition Principle.html"  >Addition Principle</a></li>
@@ -330,6 +331,7 @@
 		<li><a class="" href="/notkesto/Mathematics/Diagonalisation Test.html"  >Diagonalisation Test</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Diagonalisation of a Linear Transformation.html"  >Diagonalisation of a Linear Transformation</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Digraph.html"  >Digraph</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Discrete Random Variable.html"  >Discrete Random Variable</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Distance Between Two Lines.html"  >Distance Between Two Lines</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Distance Between a Line and a Point.html"  >Distance Between a Line and a Point</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Distance from a Plane to a Point.html"  >Distance from a Plane to a Point</a></li>
@@ -527,17 +529,16 @@
                                 <embeddedtitle>Density function</embeddedtitle>
 <div class="content"><p><strong>Topics:</strong> <a href="/notkesto/not_created.html" class="nonexistent-link">Probability</a> - <a href="/notkesto/Mathematics/Random%20Variable.html">Random Variable</a>   </p>
 <hr />
-<h1 id="discrete-case">Discrete case</h1>
 <p><strong><em>(definition)</em></strong>   </p>
-<p>Let <span class="arithmatex">\(X\)</span> be a real <a href="/notkesto/Mathematics/Random%20Variable.html">random variable</a> whose range is:   </p>
-<div class="arithmatex">\[R_X = \{ x_1, x_2, x_3, \dots \}\]</div>
-<p>In such a case, we define the <em>density function</em> of <span class="arithmatex">\(X\)</span> as the <a href="/notkesto/Mathematics/Function.html">function</a> <span class="arithmatex">\(f_X : R_X \subseteq \mathbb{R} \to [0, 1]\)</span>:   </p>
+<p>Let <span class="arithmatex">\(X\)</span> be a real <a href="/notkesto/Mathematics/Random%20Variable.html">random variable</a> whose <a href="/notkesto/Mathematics/Range%20of%20a%20Function.html">range</a> is <span class="arithmatex">\(R_X\)</span>.   </p>
+<p>In such a case, we define the <em>density function</em> of <span class="arithmatex">\(X\)</span> as the <a href="/notkesto/Mathematics/Function.html">function</a> <span class="arithmatex">\(f_X : R_X \to [0, 1]\)</span> as:   </p>
 <div class="arithmatex">\[f_X(x) = \begin{cases}
 \mathbb{P}(X = x) &amp; \text{if } x \in R_x \\
 0 &amp; \text{otherwise}
 \end{cases}\]</div>
-<p>The density function helps us represent the values of the random variable <span class="arithmatex">\(X\)</span>.   </p>
-<h2 id="properties">Properties</h2>
+<p>Density functions helps us represent the values of the random variable <span class="arithmatex">\(X\)</span>.   </p>
+<h1 id="discrete-random-variables">Discrete Random Variables</h1>
+<p>In the case when <span class="arithmatex">\(X\)</span> is a <a href="/notkesto/Mathematics/Discrete%20Random%20Variable.html">discrete random variable</a>, the following must hold:   </p>
 <ol>
 <li>
 <div class="arithmatex">\[0 \leq f_X(x) \leq 1\]</div>
@@ -545,27 +546,38 @@
 <li>
 <div class="arithmatex">\[\sum_{x \in R_X} f_X(x) = 1\]</div>
 </li>
-</ol></div>
+</ol>
+<h1 id="absolutely-continuous-random-variables">Absolutely Continuous Random Variables</h1>
+<p>In the case when <span class="arithmatex">\(X\)</span> is a <a href="/notkesto/Mathematics/Absolutely%20Continuous%20Random%20Variable.html">absolutely continuous random variable</a>, the following must hold:   </p>
+<ol>
+<li>
+<div class="arithmatex">\[f_X &gt; 0\]</div>
+</li>
+<li>
+<div class="arithmatex">\[\int_{\mathbb{R}} f_X(x)\ dx = 1\]</div>
+</li>
+</ol>
+<p>More specifically, notice that this tells us that a density function <span class="arithmatex">\(f_X\)</span> for an absolutely continuous random variable <span class="arithmatex">\(X\)</span> (with range <span class="arithmatex">\(R_X\)</span>) is <span class="arithmatex">\(f_X : R_X \subseteq \mathbb{R} \to [0, \infty)\)</span>.</p></div>
 <div class="note-footer">
 <div class="backlinks" style="display:none"></div>
 
 <div class="tags">
 <h2>Tags</h2>
 <ul>
-	<li><a class="backlink" href="/notkesto/obs.html/tags/🌳/index.html">🌳</a></li>
 	<li><a class="backlink" href="/notkesto/obs.html/tags/MAC/S4/PB/index.html">MAC/S4/PB</a></li>
+	<li><a class="backlink" href="/notkesto/obs.html/tags/🌳/index.html">🌳</a></li>
 </ul>
 </div>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A127411722337189211950442299948069752012{level}" class="graph_div"></div>
+    <div id="A15940997453678114276991100169309641144{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B127411722337189211950442299948069752012{level}" level="{level}" note_temp_id="127411722337189211950442299948069752012" onclick="window.ObsHtmlGraph.run(this, '127411722337189211950442299948069752012', 'density function');">
+        <button class="graph_button graph_show_button" id="B15940997453678114276991100169309641144{level}" level="{level}" note_temp_id="15940997453678114276991100169309641144" onclick="window.ObsHtmlGraph.run(this, '15940997453678114276991100169309641144', 'density function');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C127411722337189211950442299948069752012{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C15940997453678114276991100169309641144{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
