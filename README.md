@@ -1,4 +1,4 @@
-# Notes
+# Psycake's Notes
 
 This is the GitHub repository that hosts my notes, which include:
 
