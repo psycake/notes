@@ -349,13 +349,16 @@
 		<li><a class="" href="/notkesto/Mathematics/Event.html"  >Event</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Event Independence.html"  >Event Independence</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Expanded Subgraph.html"  >Expanded Subgraph</a></li>
+		<li><a class="" href="/notkesto/Mathematics/External and Internal Degrees of a Vertex.html"  >External and Internal Degrees of a Vertex</a></li>
 		<li><a class="" href="/notkesto/Mathematics/False Position Method.html"  >False Position Method</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Floating Point Form of Real Numbers.html"  >Floating Point Form of Real Numbers</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Frequency.html"  >Frequency</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Function.html"  >Function</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Geometry.html"  >Geometry</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Graph.html"  >Graph</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Graph Fusion.html"  >Graph Fusion</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Handshaking Lemma.html"  >Handshaking Lemma</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Hanging Vertex.html"  >Hanging Vertex</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Hasse Diagram.html"  >Hasse Diagram</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Havel-Hakimi Algorithm.html"  >Havel-Hakimi Algorithm</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Identity Matrix.html"  >Identity Matrix</a></li>
@@ -367,6 +370,7 @@
 		<li><a class="" href="/notkesto/Mathematics/Injective Linear Transformation.html"  >Injective Linear Transformation</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Inner Product.html"  >Inner Product</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Interior Point.html"  >Interior Point</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Intersection of Graphs.html"  >Intersection of Graphs</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Inverse Linear Transformation.html"  >Inverse Linear Transformation</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Inverse Relation.html"  >Inverse Relation</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Isomorphic Graphs.html"  >Isomorphic Graphs</a></li>
@@ -441,6 +445,7 @@
 		<li><a class="" href="/notkesto/Mathematics/Relation.html"  >Relation</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Relations as a Set.html"  >Relations as a Set</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Relative Error.html"  >Relative Error</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Ring Sum of Graphs.html"  >Ring Sum of Graphs</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Rounding Error.html"  >Rounding Error</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Sample Space.html"  >Sample Space</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Secant Method.html"  >Secant Method</a></li>
@@ -454,6 +459,7 @@
 		<li><a class="" href="/notkesto/Mathematics/Subgraph.html"  >Subgraph</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Subjacent Graph.html"  >Subjacent Graph</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Subsequence.html"  >Subsequence</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Sum of Graphs.html"  >Sum of Graphs</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Supremum and Infimum.html"  >Supremum and Infimum</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Surjective Linear Transformations.html"  >Surjective Linear Transformations</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Tangent Unit Vector.html"  >Tangent Unit Vector</a></li>
@@ -464,7 +470,11 @@
 		<li><a class="" href="/notkesto/Mathematics/Total Order Relation.html"  >Total Order Relation</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Total Probability Formula.html"  >Total Probability Formula</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Two Line Cases.html"  >Two Line Cases</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Types of Edges.html"  >Types of Edges</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Types of Graphs.html"  >Types of Graphs</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Types of Paths.html"  >Types of Paths</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Types of Vertices in a Digraph.html"  >Types of Vertices in a Digraph</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Union of Graphs.html"  >Union of Graphs</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Upper and Lower Bounds.html"  >Upper and Lower Bounds</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Vector Field.html"  >Vector Field</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Vector Space.html"  >Vector Space</a></li>
@@ -533,24 +543,51 @@
 <div class="content"><h1 id="graphs">Graphs</h1>
 <p>A <a href="/notkesto/Mathematics/Graph.html">graph</a> is a structure that has a set of <a href="/notkesto/Mathematics/Vertex.html">vertices</a> and a set of <a href="/notkesto/Mathematics/Edge.html">edges</a>. Edges link together vertices. Graphs can be represented graphically:   </p>
 <p><img src="/notkesto/Assets/Graph-1.png"  width="300" alt="" title="" />   </p>
-<p>There are <a href="/notkesto/Mathematics/Types%20of%20Graphs.html">several types of graphs</a>, the most important one of them being the <a href="/notkesto/Mathematics/Simple%20Graph.html">simple graph</a>. A simple graph whose vertices have all the same degree is called a <a href="/notkesto/Mathematics/Regular%20Graph.html">regular graph</a>.   </p>
+<p>There are <a href="/notkesto/Mathematics/Types%20of%20Graphs.html">several types of graphs</a>, the most important one of them being the <a href="/notkesto/Mathematics/Simple%20Graph.html">simple graph</a>.   </p>
+<ul>
+<li>A simple graph whose vertices have all the same degree is called a <a href="/notkesto/Mathematics/Regular%20Graph.html">regular graph</a>.   </li>
+<li>A graph whose edges are all directed (i.e. arcs) is called a <a href="/notkesto/Mathematics/Digraph.html">digraph</a>.   </li>
+</ul>
+<p>Graphs contained within other graphs are called <a href="/notkesto/Mathematics/Subgraph.html">subgraphs</a>.   </p>
+<ul>
+<li>We can have <a href="/notkesto/Mathematics/Edge-Disjoint%20Subgraphs.html">edge-disjoint</a> and <a href="/notkesto/Mathematics/Vertex-Disjoint%20Subgraphs.html">vertex-disjoint</a> subgraphs   </li>
+<li>We can also have <a href="/notkesto/Mathematics/Expanded%20Subgraph.html">expanded subgraphs</a>.    </li>
+</ul>
+<p>When we remove all the directions from a digraph <span class="arithmatex">\(G\)</span> that consists of all arcs, we get <span class="arithmatex">\(G\)</span>'s <a href="/notkesto/Mathematics/Subjacent%20Graph.html">subjacent graph</a>.   </p>
 <p>Just like many other mathematical structures, <a href="/notkesto/Mathematics/Isomorphic%20Graphs.html">graphs can be isomorphic</a>.   </p>
-<p>Graphs contained within other graphs are called <a href="/notkesto/Mathematics/Subgraph.html">subgraphs</a>. We can have <a href="/notkesto/Mathematics/Edge-Disjoint%20Subgraphs.html">edge-disjoint</a> and <a href="/notkesto/Mathematics/Vertex-Disjoint%20Subgraphs.html">vertex-disjoint</a> subgraphs, as well as <a href="/notkesto/Mathematics/Expanded%20Subgraph.html">expanded subgraphs</a>.    </p>
 <h1 id="vertices-and-edges">Vertices and Edges</h1>
-<p>Each vertex in a graph has an <a href="/notkesto/Mathematics/Open%20Neighbourhood.html">open</a> and a <a href="/notkesto/Mathematics/Closed%20Neighbourhood.html">closed</a> neighbourhood. A vertex where several edges incide is called a <a href="/notkesto/Mathematics/Multi-Edge.html">multi-edge</a>. The amount of edges that incide on a vertex define its <a href="/notkesto/Mathematics/Vertex%20Degree.html">degree</a>.   </p>
+<h2 id="vertices">Vertices</h2>
+<p>Each vertex in a graph has an <a href="/notkesto/Mathematics/Open%20Neighbourhood.html">open</a> and a <a href="/notkesto/Mathematics/Closed%20Neighbourhood.html">closed</a> neighbourhood. A vertex where several edges incide is called a <a href="/notkesto/Mathematics/Multi-Edge.html">multi-edge</a>.    </p>
+<p>The amount of edges that incide on a vertex define its <a href="/notkesto/Mathematics/Vertex%20Degree.html">degree</a>.    </p>
+<p>In the context of a digraph, we can define a vertex's <a href="/notkesto/Mathematics/External%20and%20Internal%20Degrees%20of%20a%20Vertex.html">external and internal degrees</a>. In this same context, we can have <a href="/notkesto/Mathematics/Types%20of%20Vertices%20in%20a%20Digraph.html">several types of vertices</a>, one of them being the <a href="/notkesto/Mathematics/Hanging%20Vertex.html">hanging vertex</a>.   </p>
+<h2 id="edges">Edges</h2>
 <p>Edges with a direction are called <a href="/notkesto/Mathematics/Arc.html">arcs</a>.   </p>
-<p>When we remove all the directions from a graph <span class="arithmatex">\(G\)</span> with all arcs, we get <span class="arithmatex">\(G\)</span>'s <a href="/notkesto/Mathematics/Subjacent%20Graph.html">subjacent graph</a>.   </p>
+<p>Edges can be of <a href="/notkesto/Mathematics/Types%20of%20Edges.html">several types</a>.   </p>
+<h1 id="operations-with-graphs">Operations with Graphs</h1>
+<p>Since graphs are essentially sets, we can define various operations on them:   </p>
+<ul>
+<li><a href="/notkesto/Mathematics/Union%20of%20Graphs.html">Union</a>, <span class="arithmatex">\(\cup\)</span>   </li>
+<li><a href="/notkesto/Mathematics/Intersection%20of%20Graphs.html">Intersection</a>, <span class="arithmatex">\(\cap\)</span>   </li>
+<li><a href="/notkesto/Mathematics/Sum%20of%20Graphs.html">Sum</a>, <span class="arithmatex">\(+\)</span>   </li>
+<li><a href="/notkesto/Mathematics/Ring%20Sum%20of%20Graphs.html">Ring sum</a>, <span class="arithmatex">\(\oplus\)</span>   </li>
+</ul>
+<p>We can additionally define <a href="/notkesto/Mathematics/Graph%20Fusion.html">graph fusion</a> (<span class="arithmatex">\(/\)</span>), a special operation that is carried out within one same graph, relative to one of its edges.   </p>
 <h1 id="algorithms-lemmas-and-principles">Algorithms, Lemmas and Principles</h1>
 <p>By using the <a href="/notkesto/Mathematics/Havel-Hakimi%20Algorithm.html">Havel-Hakimi algorithm</a>, we can determine if a given non-increasing sequence of integers corresponds to the sequence of vertex degrees of a simple graph.   </p>
 <p>The <a href="/notkesto/Mathematics/Handshaking%20Lemma.html">Handshaking lemma</a> tells us that given a graph with no edges, the sum of its vertices is always twice its number of edges.   </p>
 <p>The <a href="/notkesto/Mathematics/Pigeonhole%20Principle.html">Pigeonhole principle</a> tells us that, given <span class="arithmatex">\(n&gt;m\)</span>, when we try to put <span class="arithmatex">\(n\)</span> objects in <span class="arithmatex">\(m\)</span> containers, then at least one container must be able to hold more than one object.   </p>
 <h1 id="paths">Paths</h1>
 <p>A <a href="/notkesto/Mathematics/Path.html">path</a> is an alternated finite sequence of vertices and degrees. Paths describe a "way" to traverse a graph.   </p>
-<p>There are several types of paths:   </p>
+<p>There are <a href="/notkesto/Mathematics/Types%20of%20Paths.html">various types of paths</a>, the most important of them being:   </p>
 <ul>
-<li>A <a href="/notkesto/Mathematics/Simple%20Trajectory.html">simple trajectory</a> is an open path with no repeated vertices or edges.   </li>
-<li>A <a href="/notkesto/Mathematics/Circuit.html">circuit</a> is a closed path with no repeated edges, just one repeated vertex.</li>
-</ul></div>
+<li>
+<p>A <a href="/notkesto/Mathematics/Simple%20Trajectory.html">simple trajectory</a> is an open path with no repeated vertices or edges.   </p>
+</li>
+<li>
+<p>A <a href="/notkesto/Mathematics/Circuit.html">circuit</a> is a closed path with no repeated edges, just one repeated vertex.   </p>
+</li>
+</ul>
+<p>All these three, paths, trajectories and circuits, can be directed, which obey the direction of the arcs they go through.</p></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
@@ -569,13 +606,13 @@
 
 </div>
 <div class="graph requires_js ">
-    <div id="A264299246169923660255060791572278213280{level}" class="graph_div"></div>
+    <div id="A286157973254064091169844746892725441171{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B264299246169923660255060791572278213280{level}" level="{level}" note_temp_id="264299246169923660255060791572278213280" onclick="window.ObsHtmlGraph.run(this, '264299246169923660255060791572278213280', 'teoría de gráficas');">
+        <button class="graph_button graph_show_button" id="B286157973254064091169844746892725441171{level}" level="{level}" note_temp_id="286157973254064091169844746892725441171" onclick="window.ObsHtmlGraph.run(this, '286157973254064091169844746892725441171', 'teoría de gráficas');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C264299246169923660255060791572278213280{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C286157973254064091169844746892725441171{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
