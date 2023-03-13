@@ -260,6 +260,7 @@
 		<ul class="dir-list">
 			<li><a class="" href="/notkesto/MAC/4th Semester/Bases de Datos.html"  >Bases de Datos</a></li>
 			<li><a class="" href="/notkesto/MAC/4th Semester/Cálculo IV.html"  >Cálculo IV</a></li>
+			<li><a class="" href="/notkesto/MAC/4th Semester/Métodos Numéricos II.html"  >Métodos Numéricos II</a></li>
 			<li><a class="" href="/notkesto/MAC/4th Semester/Probabilidad.html"  >Probabilidad</a></li>
 			<li><a class="" href="/notkesto/MAC/4th Semester/Teoría de Gráficas.html"  >Teoría de Gráficas</a></li>
 		</ul>
@@ -371,6 +372,7 @@
 		<li><a class="" href="/notkesto/Mathematics/Injective Linear Transformation.html"  >Injective Linear Transformation</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Inner Product.html"  >Inner Product</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Interior Point.html"  >Interior Point</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Interpolation.html"  >Interpolation</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Intersection of Graphs.html"  >Intersection of Graphs</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Inverse Linear Transformation.html"  >Inverse Linear Transformation</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Inverse Relation.html"  >Inverse Relation</a></li>
@@ -544,7 +546,7 @@
 <div class="content"><p><strong>Topics:</strong> <a href="/notkesto/not_created.html" class="nonexistent-link">Polynomial</a> - <a href="/notkesto/not_created.html" class="nonexistent-link">Numerical Analysis</a>   </p>
 <hr />
 <p>Let us have <span class="arithmatex">\(n+1\)</span> <a href="/notkesto/not_created.html" class="nonexistent-link">points</a> <span class="arithmatex">\((x_0, y_0), \dots, (x_n, y_n)\)</span>, with <span class="arithmatex">\(x_i \neq x_j\)</span> when <span class="arithmatex">\(i \neq j\)</span> (i.e. all abscissas distinct).   </p>
-<p>We will build a polynomial of degree <span class="arithmatex">\(n\)</span>, called the <em>Lagrange (interpolation) polynomial</em>, that will allow us to <a href="/notkesto/not_created.html" class="nonexistent-link">interpolate</a> this sequence of points.   </p>
+<p>We will build a polynomial of degree <span class="arithmatex">\(n\)</span>, called the <em>Lagrange (interpolation) polynomial</em>, that will allow us to <a href="/notkesto/Mathematics/Interpolation.html">interpolate</a> this sequence of points.   </p>
 <h1 id="lagrange-basis">Lagrange Basis</h1>
 <p><em><strong>(definition)</strong></em>   </p>
 <p>We define the <em>Lagrange <a href="/notkesto/not_created.html" class="nonexistent-link">basis</a></em> as the <a href="/notkesto/not_created.html" class="nonexistent-link">set</a> of <a href="/notkesto/not_created.html" class="nonexistent-link">polynomials</a> <span class="arithmatex">\(\{ l_0(X), l_1(X), \dots, l_n(X) \}\)</span>, where:   </p>
@@ -566,27 +568,33 @@ L(X) &amp;= \sum_{j=0}^n l_j(X)\ y_j \\
 &amp;= l_0(X)\ y_0 + l_1(X)\ y_1 + \dots + l_n(X)\ y_n
 \end{align}\]</div>
 <p>This polynomial is special in that for all <span class="arithmatex">\(i\)</span>, <span class="arithmatex">\(L(x_i) = y_i\)</span>. This happens thanks to the Kronecker delta-like behaviour of the polynomials in the basis.   </p>
-<p>This allows us to use the polynomial to <a href="/notkesto/not_created.html" class="nonexistent-link">interpolate</a> the initial sequence of points.</p></div>
+<p>This allows us to use the polynomial to <a href="/notkesto/Mathematics/Interpolation.html">interpolate</a> the initial sequence of points.</p></div>
 <div class="note-footer">
-<div class="backlinks" style="display:none"></div>
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="/notkesto/Mathematics/Interpolation.html">interpolation</a></li>
+	<li><a class="backlink" href="/notkesto/MAC/4th Semester/Métodos Numéricos II.html">métodos numéricos ii</a></li>
+</ul>
+</div>
 
 <div class="tags">
 <h2>Tags</h2>
 <ul>
-	<li><a class="backlink" href="/notkesto/obs.html/tags/🌳/index.html">🌳</a></li>
 	<li><a class="backlink" href="/notkesto/obs.html/tags/MAC/S4/MN2/index.html">MAC/S4/MN2</a></li>
+	<li><a class="backlink" href="/notkesto/obs.html/tags/🌳/index.html">🌳</a></li>
 </ul>
 </div>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A280393549970579760978723383615208011444{level}" class="graph_div"></div>
+    <div id="A326639723771982786746985784269407908900{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B280393549970579760978723383615208011444{level}" level="{level}" note_temp_id="280393549970579760978723383615208011444" onclick="window.ObsHtmlGraph.run(this, '280393549970579760978723383615208011444', 'lagrange polynomial');">
+        <button class="graph_button graph_show_button" id="B326639723771982786746985784269407908900{level}" level="{level}" note_temp_id="326639723771982786746985784269407908900" onclick="window.ObsHtmlGraph.run(this, '326639723771982786746985784269407908900', 'lagrange polynomial');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C280393549970579760978723383615208011444{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C326639723771982786746985784269407908900{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>

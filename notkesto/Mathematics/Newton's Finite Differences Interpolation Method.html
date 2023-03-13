@@ -260,6 +260,7 @@
 		<ul class="dir-list">
 			<li><a class="" href="/notkesto/MAC/4th Semester/Bases de Datos.html"  >Bases de Datos</a></li>
 			<li><a class="" href="/notkesto/MAC/4th Semester/Cálculo IV.html"  >Cálculo IV</a></li>
+			<li><a class="" href="/notkesto/MAC/4th Semester/Métodos Numéricos II.html"  >Métodos Numéricos II</a></li>
 			<li><a class="" href="/notkesto/MAC/4th Semester/Probabilidad.html"  >Probabilidad</a></li>
 			<li><a class="" href="/notkesto/MAC/4th Semester/Teoría de Gráficas.html"  >Teoría de Gráficas</a></li>
 		</ul>
@@ -371,6 +372,7 @@
 		<li><a class="" href="/notkesto/Mathematics/Injective Linear Transformation.html"  >Injective Linear Transformation</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Inner Product.html"  >Inner Product</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Interior Point.html"  >Interior Point</a></li>
+		<li><a class="" href="/notkesto/Mathematics/Interpolation.html"  >Interpolation</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Intersection of Graphs.html"  >Intersection of Graphs</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Inverse Linear Transformation.html"  >Inverse Linear Transformation</a></li>
 		<li><a class="" href="/notkesto/Mathematics/Inverse Relation.html"  >Inverse Relation</a></li>
@@ -541,7 +543,7 @@
 </div>
                         <div class="container">
                                 <embeddedtitle>Newton's finite differences interpolation method</embeddedtitle>
-<div class="content"><p><strong>Topics:</strong> <a href="/notkesto/not_created.html" class="nonexistent-link">Interpolation</a>   </p>
+<div class="content"><p><strong>Topics:</strong> <a href="/notkesto/Mathematics/Interpolation.html">Interpolation</a>   </p>
 <hr />
 <p>Let <span class="arithmatex">\(y = f(x)\)</span> be a <a href="/notkesto/Mathematics/Function.html">function</a> whose exact definition we don't know. All we have is various values of <span class="arithmatex">\(f(x)\)</span> given in a table like the following one:   </p>
 <table>
@@ -728,7 +730,7 @@ We can also write these differences as <span class="arithmatex">\(\Delta y_i\)</
 </tbody>
 </table>
 <h1 id="interpolation-formulas">Interpolation Formulas</h1>
-<p>Given an <span class="arithmatex">\(x_k\)</span> contained within the constraints of the table (i.e. <span class="arithmatex">\(x_0 \leq x_k \leq x_n\)</span>), we can use these differences to <a href="/notkesto/not_created.html" class="nonexistent-link">interpolate</a> its <span class="arithmatex">\(y_k = f(x_k)\)</span> with two formulas.    </p>
+<p>Given an <span class="arithmatex">\(x_k\)</span> contained within the constraints of the table (i.e. <span class="arithmatex">\(x_0 \leq x_k \leq x_n\)</span>), we can use these differences to <a href="/notkesto/Mathematics/Interpolation.html">interpolate</a> its <span class="arithmatex">\(y_k = f(x_k)\)</span> with two formulas.    </p>
 <p>For both of them, we choose a specific <span class="arithmatex">\(x_i\)</span> in our table as an anchor value. We'll refer to this value as <span class="arithmatex">\(x_0\)</span> from now on.   </p>
 <p>The choice of formula depends on the amount of differences that can be used with each one (the greater, the better the approximation), as well as how close <span class="arithmatex">\(x_k\)</span> is to <span class="arithmatex">\(x_0\)</span> (the closer, the better).   </p>
 <h2 id="forwards-interpolation">Forwards Interpolation</h2>
@@ -742,25 +744,31 @@ We can also write these differences as <span class="arithmatex">\(\Delta y_i\)</
 <p>We can obtain our <span class="arithmatex">\(y_k = f(x_k)\)</span> with the <em>backwards interpolation</em> formula:   </p>
 <div class="arithmatex">\[y_{k} = y_0 - ka_{-1} + \frac{k(k-1)}{2!}b_{-2} - \frac{k(k-1)(k-2)}{3!}c_{-3} + \dots\]</div></div>
 <div class="note-footer">
-<div class="backlinks" style="display:none"></div>
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="/notkesto/Mathematics/Interpolation.html">interpolation</a></li>
+	<li><a class="backlink" href="/notkesto/MAC/4th Semester/Métodos Numéricos II.html">métodos numéricos ii</a></li>
+</ul>
+</div>
 
 <div class="tags">
 <h2>Tags</h2>
 <ul>
-	<li><a class="backlink" href="/notkesto/obs.html/tags/🌳/index.html">🌳</a></li>
 	<li><a class="backlink" href="/notkesto/obs.html/tags/MAC/S4/MN2/index.html">MAC/S4/MN2</a></li>
+	<li><a class="backlink" href="/notkesto/obs.html/tags/🌳/index.html">🌳</a></li>
 </ul>
 </div>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A169563429725602002986103541284002497691{level}" class="graph_div"></div>
+    <div id="A97008403201898410398213308119290362539{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B169563429725602002986103541284002497691{level}" level="{level}" note_temp_id="169563429725602002986103541284002497691" onclick="window.ObsHtmlGraph.run(this, '169563429725602002986103541284002497691', 'newton's finite differences interpolation method');">
+        <button class="graph_button graph_show_button" id="B97008403201898410398213308119290362539{level}" level="{level}" note_temp_id="97008403201898410398213308119290362539" onclick="window.ObsHtmlGraph.run(this, '97008403201898410398213308119290362539', 'newton's finite differences interpolation method');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C169563429725602002986103541284002497691{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C97008403201898410398213308119290362539{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
