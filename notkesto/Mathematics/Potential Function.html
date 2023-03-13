@@ -5,7 +5,7 @@
         <head>
                 <!-- Page information -->
                 <meta charset="UTF-8" />
-                <meta name="node_id" content="types of edges">
+                <meta name="node_id" content="potential function">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="shortcut icon" href="/notkesto/favicon.ico" />
 
@@ -48,7 +48,7 @@
 
                 <!-- Onload tweaks -->
                 <script>
-                        const CURRENT_NODE = 'types of edges';
+                        const CURRENT_NODE = 'potential function';
                         const HTML_URL_PREFIX = '/notkesto';
                         const PAGE_DEPTH = 1;
                 </script>
@@ -165,7 +165,7 @@
                 }
         </script>
                                     <div class="graph_header_div requires_js">
-            <a id="graph_link" class="system-link" href="/notkesto/obs.html/graph/index.html?node=types of edges" title="Open fullpage Graph">
+            <a id="graph_link" class="system-link" href="/notkesto/obs.html/graph/index.html?node=potential function" title="Open fullpage Graph">
                     <img class="graph_header_div_svg" src = "/notkesto/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
             </a>
         </div>
@@ -542,47 +542,61 @@
     </div>
 </div>
                         <div class="container">
-                                <embeddedtitle>Types of edges</embeddedtitle>
-<div class="content"><p><strong>Topics:</strong> <a href="/notkesto/Mathematics/Edge.html">Edge</a> - <a href="/notkesto/not_created.html" class="nonexistent-link">Graph Theory</a>   </p>
+                                <embeddedtitle>Potential function</embeddedtitle>
+<div class="content"><p><strong>Topics:</strong> <a href="/notkesto/Mathematics/Vector%20Field.html">Vector Field</a>   </p>
 <hr />
 <p><strong><em>(definition)</em></strong>   </p>
-<p><a href="/notkesto/Mathematics/Edge.html">Edges</a> can be of several types.   </p>
-<ul>
-<li>
-<p>A <em>loop</em> is an edge that connects a <a href="/notkesto/Mathematics/Vertex.html">vertex</a> to itself.   </p>
-</li>
-<li>
-<p>Two <a href="/notkesto/Mathematics/Arc.html">arcs</a> are <em>parallel</em> if they share the same initial vertex and they point to the same general direction.   </p>
-</li>
-<li>
-<p>Two arcs <span class="arithmatex">\(v_1\)</span> and <span class="arithmatex">\(v_2\)</span> are <em>recurring</em> if the initial vertex of <span class="arithmatex">\(v_1\)</span> is the final vertex of <span class="arithmatex">\(v_2\)</span>, and the final vertex of <span class="arithmatex">\(v_1\)</span> is the initial vertex of <span class="arithmatex">\(v_2\)</span>.</p>
-</li>
-</ul></div>
+<p>Given <span class="arithmatex">\(F: \mathbb{R}^n \to V_n\)</span> a <a href="/notkesto/Mathematics/Vector%20Field.html">vector field</a>, we say that <span class="arithmatex">\(f : \mathbb{R}^n \to \mathbb{R}\)</span> is a <em>potential function</em> of <span class="arithmatex">\(F\)</span> if:   </p>
+<div class="arithmatex">\[\nabla f = F\]</div>
+<p>…where <span class="arithmatex">\(\nabla f\)</span> denotes the <a href="/notkesto/not_created.html" class="nonexistent-link">gradient</a> of <span class="arithmatex">\(f\)</span>.   </p>
+<div class="callout callout-example active callout-folded" rasa="1">
+<div class="callout-title" onclick="toggle(this.parentElement)">
+<div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+</div>
+<div class="callout-title-name">Example
+</div>
+<div class="callout-title-fold"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ChevronDown"><polyline points="6 9 12 15 18 9"></polyline>
+</div>
+</div>
+<div class="callout-content">
+<p>Let <span class="arithmatex">\(F(x,y) = \langle x, y \rangle\)</span>. <br />
+</p>
+<p>Is <span class="arithmatex">\(f : \mathbb{R}^2 \to \mathbb{R}\)</span>, <span class="arithmatex">\(f(x,y) = \frac{x^2}{2} + \frac{y^2}{2}\)</span> a potential function of <span class="arithmatex">\(F\)</span>?  <br />
+</p>
+<p>Let's obtain its gradient: <br />
+</p>
+<div class="arithmatex">\[\nabla f = \left\langle \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right\rangle = \langle x, y \rangle = F\]</div>
+<p>As we can see, <span class="arithmatex">\(\nabla f = F\)</span>, so <span class="arithmatex">\(f\)</span> is effectively a potential function of <span class="arithmatex">\(F\)</span>. <br />
+</p>
+</div>
+</div>
+<p>When a vector field has a potential function, we say that it is <em>conservative</em>.</p></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
 <ul>
-	<li><a class="backlink" href="/notkesto/MAC/4th Semester/Teoría de Gráficas.html">teoría de gráficas</a></li>
+	<li><a class="backlink" href="/notkesto/Mathematics/Vector Field.html">vector field</a></li>
+	<li><a class="backlink" href="/notkesto/MAC/4th Semester/Cálculo IV.html">cálculo iv</a></li>
 </ul>
 </div>
 
 <div class="tags">
 <h2>Tags</h2>
 <ul>
-	<li><a class="backlink" href="/notkesto/obs.html/tags/MAC/S4/TG/index.html">MAC/S4/TG</a></li>
 	<li><a class="backlink" href="/notkesto/obs.html/tags/🌳/index.html">🌳</a></li>
+	<li><a class="backlink" href="/notkesto/obs.html/tags/MAC/S4/C4/index.html">MAC/S4/C4</a></li>
 </ul>
 </div>
 
 </div>
 <div class="graph requires_js ">
-    <div id="A201851384240547531620496254958131087124{level}" class="graph_div"></div>
+    <div id="A227609914114881729212235323380142705577{level}" class="graph_div"></div>
     
     <div class="graph-button-row" style="display:flex;">
-        <button class="graph_button graph_show_button" id="B201851384240547531620496254958131087124{level}" level="{level}" note_temp_id="201851384240547531620496254958131087124" onclick="window.ObsHtmlGraph.run(this, '201851384240547531620496254958131087124', 'types of edges');">
+        <button class="graph_button graph_show_button" id="B227609914114881729212235323380142705577{level}" level="{level}" note_temp_id="227609914114881729212235323380142705577" onclick="window.ObsHtmlGraph.run(this, '227609914114881729212235323380142705577', 'potential function');">
             Show Graph
         </button>
-        <button class="graph_button graph_type_button" id="C201851384240547531620496254958131087124{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+        <button class="graph_button graph_type_button" id="C227609914114881729212235323380142705577{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
             2D
         </button>
     </div>
